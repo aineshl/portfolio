@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Amazon ShopSmart — Ainesh Lertsachakul</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<nav class="nav">
+  <a href="../index.html" class="nav-logo"><img src="../assets/avatar.png" alt="Ainesh"/></a>
+  <div class="nav-center"><a href="../index.html#skills">SKILLS</a><a href="../index.html#projects">PROJECTS</a><a href="../assets/Ainesh_Lertsachakul_Resume.pdf" download="Ainesh_Lertsachakul_Resume.pdf">RESUME</a></div>
+  <div class="nav-right"><a href="mailto:ainesh8@gmail.com" class="nav-icon-btn"><img src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/697062b238d113175ac10a79_vecteezy_gmail-png-icon_16716465.png" alt="Gmail"/></a><a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" class="nav-icon-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+</nav>
+
+<header class="case-hero">
+  <div class="case-hero-inner">
+    <a href="../index.html#projects" class="back">← All Projects</a>
+    <div class="case-tags"><span class="case-tag">Consumer · Applied AI</span><span class="case-tag">Solo Full-Stack</span><span class="case-tag">Personal Project</span></div>
+    <h1 class="case-h1">Amazon<br><span class="blue">ShopSmart</span></h1>
+    <p class="case-sub">An AI-powered Amazon product comparison tool with a clear, data-driven recommendation — built solo from 100+ user surveys to shipped product.</p>
+    <div class="case-kpis">
+      <div class="kpi"><span class="kpi-n">100+</span><span class="kpi-l">User surveys<br>defining the MVP</span></div>
+      <div class="kpi"><span class="kpi-n">72%</span><span class="kpi-l">Users spent too much time<br>comparing products</span></div>
+      <div class="kpi"><span class="kpi-n">54%</span><span class="kpi-l">Couldn't interpret<br>rating vs. review volume</span></div>
+      <div class="kpi"><span class="kpi-n">15+</span><span class="kpi-l">Users tested before<br>final iteration</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="case-body">
+  <div class="case-layout">
+    <div class="case-main">
+
+      <div class="cs">
+        <h2>The Problem</h2>
+        <p>Amazon shopping is cognitively exhausting — too many tabs, contradictory reviews, and star ratings that don't account for sample size. A 4.3 with 40 reviews and a 4.3 with 14,000 reviews look identical. 100+ surveys confirmed: 72% spent too much time comparing products, 54% couldn't reliably interpret rating vs. review volume. Amazon had filters — not synthesis.</p>
+      </div>
+
+      <div class="cs">
+        <h2>My Role</h2>
+        <p>Sole PM, designer, and developer — user research, problem framing, MVP scoping, Figma prototyping, full-stack development, scoring algorithm design, AI integration, user testing, and iteration.</p>
+      </div>
+
+      <div class="cs">
+        <h2>What I Built</h2>
+        <figure class="cs-img" style="margin-bottom:1.5rem">
+          <img src="../assets/shopsmart-screenshot.png" alt="Amazon ShopSmart app interface" loading="lazy"/>
+          <figcaption>ShopSmart — the final shipped product</figcaption>
+        </figure>
+        <ul>
+          <li><strong>ShopSmart Score</strong> — weighted algorithm: price, rating, and review volume as a reliability proxy. Trustworthiness of stars, not just stars.</li>
+          <li><strong>Recommended pick with rationale</strong> — users wanted a verdict, not a comparison table</li>
+          <li><strong>AI feature summary</strong> — BART model synthesizing product description into key differentiators</li>
+          <li><strong>AI review summary</strong> — BART model across the 100 most recent reviews</li>
+          <li><strong>Parallel processing</strong> — both products scraped simultaneously with a progress loading state</li>
+        </ul>
+      </div>
+
+      <div class="cs">
+        <h2>What 15+ Testers Told Me</h2>
+        <div class="callout" style="margin-bottom:.75rem"><p><strong>Slow processing</strong> → Parallel scraping + dynamic loading state.</p></div>
+        <div class="callout" style="margin-bottom:.75rem"><p><strong>Opaque scores</strong> → Added explanation of weighting. Users don't trust unexplained numbers.</p></div>
+        <div class="callout" style="margin-bottom:.75rem"><p><strong>No recommendation</strong> → Added the recommended pick with rationale. Users wanted a verdict.</p></div>
+        <div class="callout"><p><strong>Visual trust</strong> → Full redesign pass. Aesthetic matters when you're asking users to trust an algorithm.</p></div>
+      </div>
+
+      <div class="cs">
+        <h2>Outcomes</h2>
+        <p>Shipped a working MVP, tested with 15+ users, iterated on 4 major feedback themes, and delivered a polished final product. Demonstrates the full PM loop: research → prototype → build → test → iterate → ship.</p>
+      </div>
+
+    </div>
+    <aside class="case-sidebar">
+      <div class="side-card"><h4>Research Findings</h4><div class="s-stat"><span class="s-n">72%</span><span class="s-l">Too much time comparing products</span></div><div class="s-stat"><span class="s-n">54%</span><span class="s-l">Couldn't interpret rating/review volume</span></div><div class="s-stat"><span class="s-n">45%</span><span class="s-l">Too much time reading reviews</span></div></div>
+      <div class="side-card"><h4>My Role</h4><p class="s-p">Sole PM, designer, and developer — research through shipping.</p></div>
+      <div class="side-card"><h4>Tech Stack</h4><div class="s-tags"><span>Python</span><span>Flask</span><span>JavaScript</span><span>HTML/CSS</span><span>BART Model</span><span>Figma</span></div></div>
+      <div class="side-card"><h4>Key Skills</h4><div class="s-tags"><span>User Research</span><span>Problem Framing</span><span>MVP Scoping</span><span>Applied AI</span><span>Full-Stack Dev</span><span>Iteration</span></div></div>
+    </aside>
+  </div>
+</section>
+
+<div class="next-band"><div class="next-inner"><div><p class="next-label">Back to Start</p><p class="next-title">Product Innovation &amp; Delivery System</p></div><a href="cis.html" class="next-btn">View case study →</a></div></div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-brand"><img src="../assets/avatar.png" alt="Ainesh" class="footer-avatar"/><span class="footer-name">Ainesh Lertsachakul</span></div><a href="mailto:ainesh8@gmail.com" class="footer-cta">Let's talk!</a><div class="footer-icons"><a href="mailto:ainesh8@gmail.com" class="nav-icon-btn"><img src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/697062b238d113175ac10a79_vecteezy_gmail-png-icon_16716465.png" alt="Gmail"/></a><a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" class="nav-icon-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div></div></footer>
+</body>
+</html>

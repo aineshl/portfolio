@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Detection System Configurator — Ainesh Lertsachakul</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<nav class="nav">
+  <a href="../index.html" class="nav-logo"><img src="../assets/avatar.png" alt="Ainesh"/></a>
+  <div class="nav-center"><a href="../index.html#skills">SKILLS</a><a href="../index.html#projects">PROJECTS</a><a href="../assets/Ainesh_Lertsachakul_Resume.pdf" download="Ainesh_Lertsachakul_Resume.pdf">RESUME</a></div>
+  <div class="nav-right"><a href="mailto:ainesh8@gmail.com" class="nav-icon-btn"><img src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/697062b238d113175ac10a79_vecteezy_gmail-png-icon_16716465.png" alt="Gmail"/></a><a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" class="nav-icon-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+</nav>
+
+<header class="case-hero">
+  <div class="case-hero-inner">
+    <a href="../index.html#projects" class="back">← All Projects</a>
+    <div class="case-tags"><span class="case-tag">Software · ERP Integration</span><span class="case-tag">PM + Developer + QA</span><span class="case-tag">Hardware Validation</span></div>
+    <h1 class="case-h1">Detection System<br><span class="blue">Configurator</span></h1>
+    <p class="case-sub">Productizing system configuration to accelerate service, quoting, and delivery — then taking over full development, rebuilding the UI for three user personas, and validating every change against physical hardware.</p>
+    <div class="case-kpis">
+      <div class="kpi"><span class="kpi-n">75%</span><span class="kpi-l">Reduction in<br>configuration time</span></div>
+      <div class="kpi"><span class="kpi-n">3</span><span class="kpi-l">User personas served<br>by one platform</span></div>
+      <div class="kpi"><span class="kpi-n">20</span><span class="kpi-l">Test cases with<br>AI-assisted regression</span></div>
+      <div class="kpi"><span class="kpi-n">0</span><span class="kpi-l">Excel tools<br>remaining</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="case-body">
+  <div class="case-layout">
+    <div class="case-main">
+
+      <div class="cs">
+        <h2>The Problem</h2>
+        <p>Controller configurations at CET were built inside a brittle Excel macro workbook. Large configurations took nearly two hours of manual engineering time. Hardware constraints on what an FCS controller could support lived in engineers' heads, not in the tool. Every error was a support ticket.</p>
+        <figure class="cs-img"><img src="https://drive.google.com/thumbnail?id=18otDjq7MXDUAhEVINxk_hSIIH8V87yOZ&sz=w1200" alt="Original Excel configurator" loading="lazy"/><figcaption>The Excel-based tool it replaced — brittle under real project complexity</figcaption></figure>
+      </div>
+
+      <div class="cs">
+        <h2>Phase 1 — PM</h2>
+        <p>I scoped and managed an external developer to build a validated web configurator integrated with Microsoft Business Central. Key architecture decision: keep config metadata out of the ERP core to avoid bloat, while keeping BC as the source of truth for products, pricing, and fulfillment.</p>
+        <p>I also used MagicPatterns for iterative UX scoping before development — rapid prototyping of the interface alongside ERP data modeling. Excel was deprecated on launch day.</p>
+        <figure class="cs-img"><img src="https://drive.google.com/thumbnail?id=1U8tVz--KEo7tSA-6oR4KeLmxQDvVOpyd&sz=w1200" alt="MagicPatterns prototype" loading="lazy"/><figcaption>Early MagicPatterns prototype — UI exploration before build</figcaption></figure>
+      </div>
+
+      <div class="cs">
+        <h2>Phase 2 — PM + Developer + QA</h2>
+        <p>I took over the Lovable codebase and rebuilt the UI for three distinct personas:</p>
+        <ul>
+          <li><strong>Production team</strong> — speed and zero ambiguity. Configures units at volume.</li>
+          <li><strong>Application engineers</strong> — full technical control. Designs complex multi-zone systems.</li>
+          <li><strong>Customers</strong> — clarity without product knowledge. Reviews and approves configurations.</li>
+        </ul>
+        <p>I personally built and maintained the Supabase backend and Business Central integration.</p>
+        <div class="img-2col">
+          <figure class="cs-img"><img src="https://drive.google.com/thumbnail?id=1N80zlzNZxKrNRqBiV1y7cbXMkBskq47o&sz=w800" alt="Configurator dashboard" loading="lazy"/><figcaption>Dashboard — project overview with live activity</figcaption></figure>
+          <figure class="cs-img"><img src="https://drive.google.com/thumbnail?id=1tO18s4TeqXi512IQ8x2XDBIL1dNUZh41&sz=w800" alt="Area detail view" loading="lazy"/><figcaption>Area detail — controller configuration with export</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="cs">
+        <h2>Testing &amp; Validation</h2>
+        <p>The configurator's critical output is a .cfg file that programs a physical FCS controller. A wrong file means a misconfigured controller in the field.</p>
+        <ul>
+          <li>Wrote 20 structured test cases covering edge cases, constraint violations, and standard configurations</li>
+          <li>Used AI-assisted validation in Lovable to run regression checks after every UI change or bug fix</li>
+          <li>Set up a bug ticketing system — personally investigated and resolved every bug filed</li>
+          <li>Personally loaded exported .cfg files onto physical FCS controllers and validated field behavior</li>
+        </ul>
+        <div class="callout">
+          <p>Every change I shipped — a UI tweak, a Business Central sync update, a bug fix — was ultimately validated against the physical controller a technician would install in the field. <strong>That's the standard I held it to.</strong></p>
+        </div>
+      </div>
+
+      <div class="cs">
+        <h2>Outcomes</h2>
+        <ul>
+          <li>75%+ reduction in configuration time — large configs from ~2 hours to under 30 minutes</li>
+          <li>Manual controller configuration largely eliminated across the production team</li>
+          <li>Full internal adoption: production, application engineers, and customer-facing use</li>
+          <li>Excel configurator fully deprecated — no rollback</li>
+          <li>Platform now expanding to support detector configuration</li>
+        </ul>
+      </div>
+
+    </div>
+    <aside class="case-sidebar">
+      <div class="side-card"><h4>Outcomes</h4><div class="s-stat"><span class="s-n">75%</span><span class="s-l">Config time reduction</span></div><div class="s-stat"><span class="s-n">20</span><span class="s-l">Test cases + AI regression</span></div><div class="s-stat"><span class="s-n">3</span><span class="s-l">User personas, one platform</span></div></div>
+      <div class="side-card"><h4>What I Owned</h4><p class="s-p">Phase 1: Scope, UX, ERP data model, MagicPatterns prototyping, external dev management.<br><br>Phase 2: Full Lovable development, Supabase backend, Business Central integration, 20-case test suite, bug ticketing, hardware validation.</p></div>
+      <div class="side-card"><h4>Tech Stack</h4><div class="s-tags"><span>Lovable</span><span>Supabase</span><span>Business Central</span><span>MagicPatterns</span><span>JavaScript</span></div></div>
+      <div class="side-card"><h4>Key Skills</h4><div class="s-tags"><span>Product Ownership</span><span>UX Design</span><span>Full-Stack Dev</span><span>Test Case Writing</span><span>QA</span><span>Hardware Validation</span></div></div>
+    </aside>
+  </div>
+</section>
+
+<div class="next-band"><div class="next-inner"><div><p class="next-label">Next Project</p><p class="next-title">Amazon ShopSmart</p></div><a href="shopsmart.html" class="next-btn">View case study →</a></div></div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-brand"><img src="../assets/avatar.png" alt="Ainesh" class="footer-avatar"/><span class="footer-name">Ainesh Lertsachakul</span></div><a href="mailto:ainesh8@gmail.com" class="footer-cta">Let's talk!</a><div class="footer-icons"><a href="mailto:ainesh8@gmail.com" class="nav-icon-btn"><img src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/697062b238d113175ac10a79_vecteezy_gmail-png-icon_16716465.png" alt="Gmail"/></a><a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" class="nav-icon-btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div></div></footer>
+</body>
+</html>
