@@ -18,14 +18,14 @@
 <header class="case-hero">
   <div class="case-hero-inner">
     <a href="../index.html#projects" class="back">← All Projects</a>
-    <div class="case-tags"><span class="case-tag">Consumer · Applied AI</span><span class="case-tag">Solo Full-Stack</span><span class="case-tag">Personal Project</span></div>
+    <div class="case-tags"><span class="case-tag">Consumer · Applied AI</span><span class="case-tag">Solo End-to-End</span><span class="case-tag">Personal Project</span></div>
     <h1 class="case-h1">Amazon<br><span class="blue">ShopSmart</span></h1>
-    <p class="case-sub">An AI-powered Amazon product comparison tool with a clear, data-driven recommendation — built solo from 100+ user surveys to shipped product.</p>
+    <p class="case-sub">100+ user surveys identified a real, unmet need. I built and shipped an AI-powered comparison tool to solve it — solo, from first interview to final iteration. This project shows how I think and work when there's no team, no roadmap, and no safety net.</p>
     <div class="case-kpis">
-      <div class="kpi"><span class="kpi-n">100+</span><span class="kpi-l">User surveys<br>defining the MVP</span></div>
-      <div class="kpi"><span class="kpi-n">72%</span><span class="kpi-l">Users spent too much time<br>comparing products</span></div>
-      <div class="kpi"><span class="kpi-n">54%</span><span class="kpi-l">Couldn't interpret<br>rating vs. review volume</span></div>
-      <div class="kpi"><span class="kpi-n">15+</span><span class="kpi-l">Users tested before<br>final iteration</span></div>
+      <div class="kpi"><span class="kpi-n">100+</span><span class="kpi-l">User surveys<br>before writing code</span></div>
+      <div class="kpi"><span class="kpi-n">72%</span><span class="kpi-l">Of users wasted time<br>comparing products</span></div>
+      <div class="kpi"><span class="kpi-n">4</span><span class="kpi-l">Major iterations driven<br>by tester feedback</span></div>
+      <div class="kpi"><span class="kpi-n">Shipped</span><span class="kpi-l">Working product,<br>validated with 15+ users</span></div>
     </div>
   </div>
 </header>
@@ -36,48 +36,59 @@
 
       <div class="cs">
         <h2>The Problem</h2>
-        <p>Amazon shopping is cognitively exhausting — too many tabs, contradictory reviews, and star ratings that don't account for sample size. A 4.3 with 40 reviews and a 4.3 with 14,000 reviews look identical. 100+ surveys confirmed: 72% spent too much time comparing products, 54% couldn't reliably interpret rating vs. review volume. Amazon had filters — not synthesis.</p>
-      </div>
-
-      <div class="cs">
-        <h2>My Role</h2>
-        <p>Sole PM, designer, and developer — user research, problem framing, MVP scoping, Figma prototyping, full-stack development, scoring algorithm design, AI integration, user testing, and iteration.</p>
+        <p>Amazon has filters. It doesn't have synthesis. A 4.3-star product with 40 reviews and a 4.3-star product with 14,000 reviews look identical — but they're completely different buying propositions. Users were opening 6 tabs to make a decision that should take 30 seconds.</p>
+        <p>100+ surveys confirmed it: 72% spent too much time comparing products, 54% couldn't reliably interpret rating vs. review volume, 45% said they spent too long reading reviews. The problem wasn't data. It was judgment.</p>
       </div>
 
       <div class="cs">
         <h2>What I Built</h2>
         <figure class="cs-img" style="margin-bottom:1.5rem">
-          <img src="../assets/shopsmart-screenshot.png" alt="Amazon ShopSmart app interface" loading="lazy"/>
-          <figcaption>ShopSmart — the final shipped product</figcaption>
+          <img src="../assets/shopsmart-screenshot.png" alt="ShopSmart" loading="lazy"/>
+          <figcaption>ShopSmart — the shipped product</figcaption>
         </figure>
+        <p>Two Amazon URLs in. One clear recommendation out. The tool gives users what filters can't: a verdict.</p>
         <ul>
-          <li><strong>ShopSmart Score</strong> — weighted algorithm: price, rating, and review volume as a reliability proxy. Trustworthiness of stars, not just stars.</li>
-          <li><strong>Recommended pick with rationale</strong> — users wanted a verdict, not a comparison table</li>
-          <li><strong>AI feature summary</strong> — BART model synthesizing product description into key differentiators</li>
-          <li><strong>AI review summary</strong> — BART model across the 100 most recent reviews</li>
-          <li><strong>Parallel processing</strong> — both products scraped simultaneously with a progress loading state</li>
+          <li><strong>ShopSmart Score</strong> — weighted algorithm combining price, rating, and review volume as a trust signal. Measures the reliability of stars, not just the stars themselves.</li>
+          <li><strong>Recommended pick with rationale</strong> — users wanted a decision, not a table. The tool makes one and explains why.</li>
+          <li><strong>AI review summary</strong> — BART model summarizing the 100 most recent reviews. Recency-weighted, not cherry-picked.</li>
+          <li><strong>Parallel scraping</strong> — both products processed simultaneously, with a progress state that communicates what's happening.</li>
         </ul>
       </div>
 
       <div class="cs">
-        <h2>What 15+ Testers Told Me</h2>
-        <div class="callout" style="margin-bottom:.75rem"><p><strong>Slow processing</strong> → Parallel scraping + dynamic loading state.</p></div>
-        <div class="callout" style="margin-bottom:.75rem"><p><strong>Opaque scores</strong> → Added explanation of weighting. Users don't trust unexplained numbers.</p></div>
-        <div class="callout" style="margin-bottom:.75rem"><p><strong>No recommendation</strong> → Added the recommended pick with rationale. Users wanted a verdict.</p></div>
-        <div class="callout"><p><strong>Visual trust</strong> → Full redesign pass. Aesthetic matters when you're asking users to trust an algorithm.</p></div>
+        <h2>What Testers Told Me — And What I Did</h2>
+        <p>15+ testers across 4 major iterations. Each round surfaced a clear signal:</p>
+        <div class="callout" style="margin-bottom:.75rem"><p><strong>Slow processing</strong> → Rebuilt to parallel scraping + dynamic loading state. Perceived wait dropped significantly.</p></div>
+        <div class="callout" style="margin-bottom:.75rem"><p><strong>Opaque scores</strong> → Added an explanation of the scoring weights. Users don't trust numbers they can't interrogate.</p></div>
+        <div class="callout" style="margin-bottom:.75rem"><p><strong>No recommendation</strong> → Added the recommended pick with written rationale. The whole point of the tool is to make a call.</p></div>
+        <div class="callout"><p><strong>Visual credibility</strong> → Full redesign pass. When you're asking someone to trust an algorithm with a purchase decision, aesthetics are a trust signal.</p></div>
       </div>
 
       <div class="cs">
-        <h2>Outcomes</h2>
-        <p>Shipped a working MVP, tested with 15+ users, iterated on 4 major feedback themes, and delivered a polished final product. Demonstrates the full PM loop: research → prototype → build → test → iterate → ship.</p>
+        <h2>Results</h2>
+        <p>A working, validated product — built solo, iterated on real feedback, and shipped. The process is what matters here: I ran research, identified a problem worth solving, scoped an MVP, built it, put it in front of users, and kept improving it based on what they told me. That loop is the job.</p>
       </div>
 
     </div>
     <aside class="case-sidebar">
-      <div class="side-card"><h4>Research Findings</h4><div class="s-stat"><span class="s-n">72%</span><span class="s-l">Too much time comparing products</span></div><div class="s-stat"><span class="s-n">54%</span><span class="s-l">Couldn't interpret rating/review volume</span></div><div class="s-stat"><span class="s-n">45%</span><span class="s-l">Too much time reading reviews</span></div></div>
-      <div class="side-card"><h4>My Role</h4><p class="s-p">Sole PM, designer, and developer — research through shipping.</p></div>
-      <div class="side-card"><h4>Tech Stack</h4><div class="s-tags"><span>Python</span><span>Flask</span><span>JavaScript</span><span>HTML/CSS</span><span>BART Model</span><span>Figma</span></div></div>
-      <div class="side-card"><h4>Key Skills</h4><div class="s-tags"><span>User Research</span><span>Problem Framing</span><span>MVP Scoping</span><span>Applied AI</span><span>Full-Stack Dev</span><span>Iteration</span></div></div>
+      <div class="side-card">
+        <h4>Research Signal</h4>
+        <div class="s-stat"><span class="s-n">72%</span><span class="s-l">Wasted time comparing</span></div>
+        <div class="s-stat"><span class="s-n">54%</span><span class="s-l">Couldn't read rating vs. volume</span></div>
+        <div class="s-stat"><span class="s-n">45%</span><span class="s-l">Spent too long on reviews</span></div>
+      </div>
+      <div class="side-card">
+        <h4>My Role</h4>
+        <p class="s-p">Solo — research, scoping, design, full-stack development, testing, and iteration.</p>
+      </div>
+      <div class="side-card">
+        <h4>Tech Stack</h4>
+        <div class="s-tags"><span>Python</span><span>Flask</span><span>JavaScript</span><span>HTML/CSS</span><span>BART Model</span><span>Figma</span></div>
+      </div>
+      <div class="side-card">
+        <h4>Skills Demonstrated</h4>
+        <div class="s-tags"><span>User Research</span><span>Problem Framing</span><span>MVP Scoping</span><span>Applied AI</span><span>Iteration</span><span>Full-Stack Dev</span></div>
+      </div>
     </aside>
   </div>
 </section>

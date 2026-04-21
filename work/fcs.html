@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Detection System Configurator — Ainesh Lertsachakul</title>
+<title>Gas Detection System Configurator — Ainesh Lertsachakul</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -20,12 +20,12 @@
     <a href="../index.html#projects" class="back">← All Projects</a>
     <div class="case-tags"><span class="case-tag">Software · ERP Integration</span><span class="case-tag">PM + Developer + QA</span><span class="case-tag">Hardware Validation</span></div>
     <h1 class="case-h1">Detection System<br><span class="blue">Configurator</span></h1>
-    <p class="case-sub">Productizing system configuration to accelerate service, quoting, and delivery — then taking over full development, rebuilding the UI for three user personas, and validating every change against physical hardware.</p>
+    <p class="case-sub">Scoped it as PM. Shipped it as a developer. Tested it against physical hardware. I replaced a brittle Excel tool with a production web platform — then took over the codebase myself, rebuilt the UI for three distinct user personas, and validated every release against real controllers in the field.</p>
     <div class="case-kpis">
       <div class="kpi"><span class="kpi-n">75%</span><span class="kpi-l">Reduction in<br>configuration time</span></div>
-      <div class="kpi"><span class="kpi-n">3</span><span class="kpi-l">User personas served<br>by one platform</span></div>
-      <div class="kpi"><span class="kpi-n">20</span><span class="kpi-l">Test cases with<br>AI-assisted regression</span></div>
-      <div class="kpi"><span class="kpi-n">0</span><span class="kpi-l">Excel tools<br>remaining</span></div>
+      <div class="kpi"><span class="kpi-n">3</span><span class="kpi-l">User personas, one<br>platform</span></div>
+      <div class="kpi"><span class="kpi-n">20</span><span class="kpi-l">Test cases with<br>hardware validation</span></div>
+      <div class="kpi"><span class="kpi-n">Zero</span><span class="kpi-l">Excel tools<br>remaining</span></div>
     </div>
   </div>
 </header>
@@ -36,63 +36,77 @@
 
       <div class="cs">
         <h2>The Problem</h2>
-        <p>Controller configurations at CET were built inside a brittle Excel macro workbook. Large configurations took nearly two hours of manual engineering time. Hardware constraints on what an FCS controller could support lived in engineers' heads, not in the tool. Every error was a support ticket.</p>
-        <figure class="cs-img"><img src="../assets/fcs-excel.png" alt="Original Excel configurator" loading="lazy"/><figcaption>The Excel-based tool it replaced — brittle under real project complexity</figcaption></figure>
+        <p>Controller configurations were built in a brittle Excel macro workbook. Large jobs took nearly two hours of senior engineering time. Hardware constraints lived in engineers' heads, not in the tool — and every error became a support ticket. The process didn't scale, and it was costing the team time they didn't have.</p>
+        <figure class="cs-img"><img src="../assets/fcs-excel.png" alt="Excel configurator" loading="lazy"/><figcaption>The tool it replaced — brittle under real project complexity</figcaption></figure>
       </div>
 
       <div class="cs">
         <h2>Phase 1 — PM</h2>
-        <p>I scoped and managed an external developer to build a validated web configurator integrated with Microsoft Business Central. Key architecture decision: keep config metadata out of the ERP core to avoid bloat, while keeping BC as the source of truth for products, pricing, and fulfillment.</p>
-        <p>I also used MagicPatterns for iterative UX scoping before development — rapid prototyping of the interface alongside ERP data modeling. Excel was deprecated on launch day.</p>
-        <figure class="cs-img"><img src="../assets/fcs-magicpatterns.png" alt="MagicPatterns prototype" loading="lazy"/><figcaption>Early MagicPatterns prototype — UI exploration before build</figcaption></figure>
+        <p>I scoped the product, defined the ERP data model, and managed an external developer to build the first version — a validated web configurator integrated with the company's ERP system (Microsoft Business Central). Key architecture decision: keep configuration metadata out of the ERP core to avoid bloat, while keeping BC as the source of truth for products, pricing, and fulfillment.</p>
+        <p>I used MagicPatterns for rapid UX prototyping before development, aligning stakeholders on the interface before a single line of code was written. Excel was deprecated on launch day — no rollback path.</p>
+        <figure class="cs-img"><img src="../assets/fcs-magicpatterns.png" alt="MagicPatterns prototype" loading="lazy"/><figcaption>Early prototype — UI aligned with stakeholders before build</figcaption></figure>
       </div>
 
       <div class="cs">
         <h2>Phase 2 — PM + Developer + QA</h2>
-        <p>I took over the Lovable codebase and rebuilt the UI for three distinct personas:</p>
+        <p>After launch, I took over the codebase entirely and rebuilt the UI for three distinct user personas — each with different mental models and workflows:</p>
         <ul>
-          <li><strong>Production team</strong> — speed and zero ambiguity. Configures units at volume.</li>
-          <li><strong>Application engineers</strong> — full technical control. Designs complex multi-zone systems.</li>
-          <li><strong>Customers</strong> — clarity without product knowledge. Reviews and approves configurations.</li>
+          <li><strong>Production team</strong> — speed and zero ambiguity. Configures units at volume. Every extra click is friction that compounds across hundreds of units.</li>
+          <li><strong>Application engineers</strong> — full technical control. Designs complex multi-zone systems with multiple controllers, channels, and priorities.</li>
+          <li><strong>Customers</strong> — clarity without product knowledge. Reviews and approves configurations without needing to know what an FCS controller is.</li>
         </ul>
-        <p>I personally built and maintained the Supabase backend and Business Central integration.</p>
+        <p>I also built and maintained the Supabase backend (auth, data persistence, project state) and the full Business Central integration.</p>
         <div class="img-2col">
-          <figure class="cs-img"><img src="../assets/fcs-dashboard.png" alt="Configurator dashboard" loading="lazy"/><figcaption>Dashboard — project overview with live activity</figcaption></figure>
-          <figure class="cs-img"><img src="../assets/fcs-area-detail.png" alt="Area detail view" loading="lazy"/><figcaption>Area detail — controller configuration with export</figcaption></figure>
+          <figure class="cs-img"><img src="../assets/fcs-dashboard.png" alt="Dashboard" loading="lazy"/><figcaption>Dashboard — live project overview and activity feed</figcaption></figure>
+          <figure class="cs-img"><img src="../assets/fcs-area-detail.png" alt="Area detail" loading="lazy"/><figcaption>Area detail — controller configuration and export</figcaption></figure>
         </div>
       </div>
 
       <div class="cs">
-        <h2>Testing &amp; Validation</h2>
-        <p>The configurator's critical output is a .cfg file that programs a physical FCS controller. A wrong file means a misconfigured controller in the field.</p>
+        <h2>Testing & Hardware Validation</h2>
+        <p>The configurator's output is a .cfg file that programs a physical controller in the field. A misconfigured file means a misconfigured installation. I treated quality accordingly:</p>
         <ul>
-          <li>Wrote 20 structured test cases covering edge cases, constraint violations, and standard configurations</li>
-          <li>Used AI-assisted validation in Lovable to run regression checks after every UI change or bug fix</li>
-          <li>Set up a bug ticketing system — personally investigated and resolved every bug filed</li>
-          <li>Personally loaded exported .cfg files onto physical FCS controllers and validated field behavior</li>
+          <li>Wrote 20 structured test cases covering edge cases, constraint violations, and standard production configurations</li>
+          <li>Used AI-assisted regression testing to validate .cfg output after every UI change or bug fix</li>
+          <li>Built a bug ticketing system — personally investigated and resolved every issue filed</li>
+          <li>Personally loaded exported .cfg files onto physical controllers and validated behavior for every test case</li>
         </ul>
         <div class="callout">
-          <p>Every change I shipped — a UI tweak, a Business Central sync update, a bug fix — was ultimately validated against the physical controller a technician would install in the field. <strong>That's the standard I held it to.</strong></p>
+          <p>Every change I shipped was validated against the physical controller a technician would install in a parking garage or a distillery. <strong>That's the bar I held myself to.</strong></p>
         </div>
       </div>
 
       <div class="cs">
-        <h2>Outcomes</h2>
+        <h2>Results</h2>
         <ul>
-          <li>75%+ reduction in configuration time — large configs from ~2 hours to under 30 minutes</li>
-          <li>Manual controller configuration largely eliminated across the production team</li>
-          <li>Full internal adoption: production, application engineers, and customer-facing use</li>
-          <li>Excel configurator fully deprecated — no rollback</li>
-          <li>Platform now expanding to support detector configuration</li>
+          <li>75%+ reduction in configuration time — large jobs from ~2 hours to under 30 minutes</li>
+          <li>Manual configuration eliminated across the production team</li>
+          <li>Full internal adoption: production, application engineers, and customer-facing workflows</li>
+          <li>Excel tool fully deprecated with no rollback</li>
+          <li>Platform now expanding to cover detector configuration — scope continues to grow</li>
         </ul>
       </div>
 
     </div>
     <aside class="case-sidebar">
-      <div class="side-card"><h4>Outcomes</h4><div class="s-stat"><span class="s-n">75%</span><span class="s-l">Config time reduction</span></div><div class="s-stat"><span class="s-n">20</span><span class="s-l">Test cases + AI regression</span></div><div class="s-stat"><span class="s-n">3</span><span class="s-l">User personas, one platform</span></div></div>
-      <div class="side-card"><h4>What I Owned</h4><p class="s-p">Phase 1: Scope, UX, ERP data model, MagicPatterns prototyping, external dev management.<br><br>Phase 2: Full Lovable development, Supabase backend, Business Central integration, 20-case test suite, bug ticketing, hardware validation.</p></div>
-      <div class="side-card"><h4>Tech Stack</h4><div class="s-tags"><span>Lovable</span><span>Supabase</span><span>Business Central</span><span>MagicPatterns</span><span>JavaScript</span></div></div>
-      <div class="side-card"><h4>Key Skills</h4><div class="s-tags"><span>Product Ownership</span><span>UX Design</span><span>Full-Stack Dev</span><span>Test Case Writing</span><span>QA</span><span>Hardware Validation</span></div></div>
+      <div class="side-card">
+        <h4>Impact</h4>
+        <div class="s-stat"><span class="s-n">75%</span><span class="s-l">Config time reduction</span></div>
+        <div class="s-stat"><span class="s-n">20</span><span class="s-l">Test cases + hardware validation</span></div>
+        <div class="s-stat"><span class="s-n">3</span><span class="s-l">User personas, one platform</span></div>
+      </div>
+      <div class="side-card">
+        <h4>What I Owned</h4>
+        <p class="s-p"><strong>Phase 1:</strong> Scope, UX, ERP data model, prototyping, external dev management.<br><br><strong>Phase 2:</strong> Full codebase, Supabase backend, ERP integration, 20-case test suite, bug triage, hardware validation.</p>
+      </div>
+      <div class="side-card">
+        <h4>Tech Stack</h4>
+        <div class="s-tags"><span>Lovable</span><span>Supabase</span><span>Business Central</span><span>MagicPatterns</span><span>JavaScript</span></div>
+      </div>
+      <div class="side-card">
+        <h4>Skills Demonstrated</h4>
+        <div class="s-tags"><span>Product Ownership</span><span>UX Design</span><span>Full-Stack Dev</span><span>ERP Integration</span><span>QA / Testing</span><span>Hardware Validation</span></div>
+      </div>
     </aside>
   </div>
 </section>

@@ -174,7 +174,7 @@ a{text-decoration:none;color:inherit}
 .carousel-track{
   display:flex;gap:1.25rem;
   width:max-content;
-  animation:carousel-scroll 28s linear infinite;
+  animation:carousel-scroll 40s linear infinite;
   cursor:default;
 }
 .carousel-track:hover{animation-play-state:paused}
@@ -184,7 +184,7 @@ a{text-decoration:none;color:inherit}
 }
 
 .skill-card{
-  flex:0 0 260px;
+  flex:0 0 240px;
   background:var(--bg-card);
   border:1px solid var(--border-card);
   border-radius:12px;
@@ -287,10 +287,36 @@ a{text-decoration:none;color:inherit}
 .proj-thumb--fcs img     { object-fit:cover;   object-position:top left; }
 .proj-thumb--shop img    { object-fit:cover;   object-position:top center; }
 
-/* responsive: hide thumb on mobile */
+/* Mobile: show thumbnails inline above metrics, smaller */
 @media(max-width:760px){
-  .proj-row{grid-template-columns:32px 1fr auto}
-  .proj-thumb{display:none}
+  .proj-row{
+    grid-template-columns:28px 1fr auto;
+    gap:0 1rem;
+  }
+  .proj-thumb{
+    display:none;
+  }
+  .proj-body-thumb{
+    display:block;
+    width:100%;
+    height:110px;
+    border-radius:8px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    background:var(--bg-section);
+    margin-bottom:.75rem;
+  }
+  .proj-body-thumb img{
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:top left;
+  }
+  .proj-body-thumb.proj-thumb--cis img  { object-fit:contain; object-position:center; background:#fff; padding:6px; }
+  .proj-body-thumb.proj-thumb--cgas img { object-fit:contain; object-position:center; background:#e8f4ff; }
+  .proj-body-thumb.proj-thumb--shop img { object-fit:cover; object-position:top center; }
+}
+@media(min-width:761px){
+  .proj-body-thumb{ display:none; }
 }
   color:var(--text-3);padding-top:.15rem;font-variant-numeric:tabular-nums;
 }
@@ -568,12 +594,65 @@ a{text-decoration:none;color:inherit}
   .case-sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
 }
 @media(max-width:600px){
-  .nav,.hero,.case-hero,.skills,.projects,.case-body,.next-band,.footer{padding-left:1.25rem;padding-right:1.25rem}
-  .stats-inner{padding:0 1.25rem;grid-template-columns:1fr 1fr}
+  /* Layout padding */
+  .nav,.hero,.case-hero,.skills,.projects,.case-body,.next-band,.footer{padding-left:1rem;padding-right:1rem}
+  .stats-inner{padding:0 1rem;grid-template-columns:1fr 1fr}
+  .carousel-wrap{padding:0 1rem}
+
+  /* Nav */
   .nav-center{display:none}
+
+  /* Hero */
+  .hero{padding:3rem 1rem}
+  .hero-h1{font-size:clamp(2.25rem,10vw,3.5rem)}
+  .hero-body{font-size:.9375rem}
+
+  /* Stats */
+  .stat-n{font-size:1.5rem}
+  .stat-l{font-size:.72rem}
+  .stat{padding:1.25rem 1rem 1.25rem 0}
+  .stat:not(:first-child){padding-left:1rem}
+
+  /* AHR strip */
+  .ahr-strip{padding:2rem 1rem}
+  .ahr-headline{font-size:1.1rem}
+  .ahr-body{font-size:.875rem}
+
+  /* Carousel - slower and smaller on phone */
+  .carousel-track{animation-duration:55s}
+  .skill-card{flex:0 0 200px;padding:1.25rem 1.125rem}
+
+  /* Projects */
+  .proj-row{padding:1.25rem .5rem;margin:0 -.5rem}
+  .proj-title{font-size:.9375rem}
+  .proj-hook{font-size:.8125rem}
+  .proj-metrics span{font-size:.72rem}
+  .proj-num{font-size:.75rem}
+
+  /* Case study pages */
   .case-sidebar{grid-template-columns:1fr}
   .img-2col{grid-template-columns:1fr}
   .next-inner{flex-direction:column;align-items:flex-start}
-  .case-kpis{gap:1.5rem}
-  .footer-inner{flex-direction:column;align-items:flex-start}
+  .case-kpis{gap:1.25rem;flex-wrap:wrap}
+  .kpi-n{font-size:1.5rem}
+  .case-h1{font-size:clamp(1.75rem,8vw,3rem)}
+  .case-sub{font-size:.9375rem}
+
+  /* Footer */
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:.875rem}
+
+  /* Case study pages */
+  .case-hero{padding:5rem 1rem 2.5rem}
+  .case-kpis{gap:1rem}
+  .kpi{min-width:calc(50% - .5rem)}
+  .next-band{padding:1.75rem 1rem}
+  .side-card{padding:.875rem}
+  .cs-img figcaption{font-size:.65rem}
+  .callout{padding:.875rem 1rem}
+}
+@media(max-width:380px){
+  .hero-h1{font-size:2rem}
+  .stat-n{font-size:1.25rem}
+  .skill-card{flex:0 0 180px}
+  .proj-title{font-size:.875rem}
 }
