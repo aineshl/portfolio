@@ -401,9 +401,17 @@ a{text-decoration:none;color:inherit}
   aspect-ratio:4/3;
 }
 .ahr-photo img{
-  width:100%;height:100%;object-fit:cover;object-position:center top;
+  width:100%;height:100%;object-fit:cover;object-position:center center;
 }
-.ahr-label{
+@media(max-width:860px){
+  .ahr-inner{grid-template-columns:1fr}
+  .ahr-photo{aspect-ratio:16/9}
+  .ahr-photo img{object-position:center 40%}
+}
+@media(max-width:600px){
+  .ahr-photo{aspect-ratio:4/3}
+  .ahr-photo img{object-position:center 35%}
+}
   font-size:.6875rem;font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;
   color:var(--blue);margin-bottom:.625rem;
