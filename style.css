@@ -609,6 +609,7 @@ a{text-decoration:none;color:inherit}
 
   /* Nav */
   .nav-center{display:none}
+  .nav-right{margin-left:auto}
 
   /* Hero */
   .hero{padding:3rem 1rem}
