@@ -63,6 +63,25 @@
       </div>
 
       <div class="cs">
+        <h2>Phase 3 — Platform Expansion: Production Database</h2>
+        <p>After establishing the configurator, I expanded the platform into a second tool: a production database that replaced both a paper-based process and a costly legacy database system with unclean, unstructured data accumulated over ~20 years.</p>
+        <div class="img-2col">
+          <figure class="cs-img"><img src="../assets/prod-db-projects.png" alt="Production database projects view" loading="lazy"/><figcaption>Projects view — 377 active projects linked to sales orders from Business Central</figcaption></figure>
+          <figure class="cs-img"><img src="../assets/prod-db-devices.png" alt="All devices lookup" loading="lazy"/><figcaption>All Devices — 1,947 devices searchable by serial, type, model, and source</figcaption></figure>
+        </div>
+        <figure class="cs-img"><img src="../assets/prod-db-serialization.png" alt="Device serialization" loading="lazy"/><figcaption>Device serialization — controllers and detectors configured and tracked by serial number and Modbus ID</figcaption></figure>
+        <p>The database serves two personas with different needs:</p>
+        <ul>
+          <li><strong>Production team</strong> — converts sales orders to work orders, stores device configuration files (XML), and auto-detects units by serial number and Modbus ID. Bulk drag-and-drop replaced one-by-one manual file loading — cutting unit build time by ~10%</li>
+          <li><strong>Application engineers</strong> — look up device configuration history, analyze trends to diagnose field issues, and access hardware data like sensor information across all units in the system</li>
+        </ul>
+        <div class="callout">
+          <p><strong>The key architectural decision:</strong> I merged the production database with the configurator's Supabase backend, sharing the same holding register tables. This means a controller configuration created by an application engineer flows directly into production with zero manual re-entry — critical for complex, non-default systems with customer-specific requirements.</p>
+        </div>
+        <p>The consolidation also cleaned up ~20 years of unstructured legacy data into a schema purpose-built for how production and application engineers actually search — with custom fields designed around their real workflows, not inherited from a system built for a different era.</p>
+      </div>
+
+      <div class="cs">
         <h2>Testing & Hardware Validation</h2>
         <p>The configurator's output is a .cfg file that programs a physical controller in the field. A misconfigured file means a misconfigured installation. I treated quality accordingly:</p>
         <ul>
@@ -80,6 +99,8 @@
         <h2>Results</h2>
         <ul>
           <li>75%+ reduction in configuration time — large jobs from ~2 hours to under 30 minutes</li>
+          <li>Production database replaced a paper process and a costly legacy system — consolidating ~20 years of unstructured data into a clean, searchable schema</li>
+          <li>Zero manual re-entry for complex configurations — application engineer configurations flow directly into production build through the shared database architecture</li>
           <li>Manual configuration eliminated across the production team</li>
           <li>Full internal adoption: production, application engineers, and customer-facing workflows</li>
           <li>Excel tool fully deprecated with no rollback</li>
@@ -92,8 +113,8 @@
       <div class="side-card">
         <h4>Impact</h4>
         <div class="s-stat"><span class="s-n">75%</span><span class="s-l">Reduction in configuration<br>time (~2hrs → under 30min)</span></div>
-        <div class="s-stat"><span class="s-n">20</span><span class="s-l">Test cases, each validated on<br>physical hardware</span></div>
-        <div class="s-stat"><span class="s-n">3</span><span class="s-l">User personas served by<br>one platform</span></div>
+        <div class="s-stat"><span class="s-n">~10%</span><span class="s-l">Unit build time reduction via<br>production database</span></div>
+        <div class="s-stat"><span class="s-n">3</span><span class="s-l">User personas across<br>one integrated platform</span></div>
       </div>
       <div class="side-card">
         <h4>My Role</h4>
