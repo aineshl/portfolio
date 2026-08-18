@@ -20,11 +20,11 @@
     <a href="../index.html#projects" class="back">← All Projects</a>
     <div class="case-tags"><span class="case-tag">Consumer · Applied AI</span><span class="case-tag">Solo End-to-End</span><span class="case-tag">Research-Driven MVP</span></div>
     <h1 class="case-h1">Amazon<br><span class="blue">ShopSmart</span></h1>
-    <p class="case-sub">100+ user surveys identified a real, unmet need. I built and shipped an AI-powered comparison tool to solve it — solo, from first interview to final iteration. This project shows how I think and work when there's no team, no roadmap, and no safety net.</p>
+    <p class="case-sub">50+ user surveys identified a real gap in how Amazon handles product comparison. I designed and shipped an AI-powered tool to solve it, from first survey to deployed product.</p>
     <div class="case-kpis">
-      <div class="kpi"><span class="kpi-n">100+</span><span class="kpi-l">User surveys<br>before writing code</span></div>
+      <div class="kpi"><span class="kpi-n">50+</span><span class="kpi-l">User surveys<br>before writing code</span></div>
       <div class="kpi"><span class="kpi-n">72%</span><span class="kpi-l">Of users wasted time<br>comparing products</span></div>
-      <div class="kpi"><span class="kpi-n">4</span><span class="kpi-l">Major iterations driven<br>by tester feedback</span></div>
+      <div class="kpi"><span class="kpi-n">3</span><span class="kpi-l">Iteration cycles driven<br>by tester feedback</span></div>
       <div class="kpi"><span class="kpi-n">Shipped</span><span class="kpi-l">Working product,<br>validated with 15+ users</span></div>
     </div>
   </div>
@@ -36,8 +36,8 @@
 
       <div class="cs">
         <h2>The Problem</h2>
-        <p>Amazon has filters. It doesn't have synthesis. A 4.3-star product with 40 reviews and a 4.3-star product with 14,000 reviews look identical — but they're completely different buying propositions. Users were opening 6 tabs to make a decision that should take 30 seconds.</p>
-        <p>100+ surveys confirmed it: 72% spent too much time comparing products, 54% couldn't reliably interpret rating vs. review volume, 45% said they spent too long reading reviews. The problem wasn't data. It was judgment.</p>
+        <p>Amazon has filters. It doesn't have synthesis. A 4.3-star product with 40 reviews and a 4.3-star product with 14,000 reviews look identical, but they're completely different buying propositions. Users were opening 6 tabs to make a decision that should take 30 seconds.</p>
+        <p>50+ surveys confirmed it: 72% spent too much time comparing products, 54% couldn't reliably interpret rating vs. review volume, and 44% said they spent too long reading reviews.</p>
       </div>
 
       <div class="cs">
@@ -52,7 +52,6 @@
         </div>
         <ul>
           <li><strong>ShopSmart Score</strong> — weighted algorithm combining price, rating, and review volume as a trust signal. Measures the reliability of stars, not just the stars themselves.</li>
-          <li><strong>Recommended pick with rationale</strong> — users wanted a decision, not a table. The tool makes one and explains why.</li>
           <li><strong>AI review summary</strong> — BART model summarizing the 100 most recent reviews. Recency-weighted, not cherry-picked.</li>
           <li><strong>Parallel scraping</strong> — both products processed simultaneously, with a progress state that communicates what's happening.</li>
         </ul>
@@ -60,31 +59,29 @@
 
       <div class="cs">
         <h2>What Testers Told Me — And What I Did</h2>
-        <p>15+ testers across 4 major iterations. Each round surfaced a clear signal:</p>
-        <div class="callout" style="margin-bottom:.75rem"><p><strong>Slow processing</strong> → Rebuilt to parallel scraping + dynamic loading state. Perceived wait dropped significantly.</p></div>
+        <p>15+ testers across 3 major iterations. Each round surfaced a clear signal:</p>
+        <div class="callout" style="margin-bottom:.75rem"><p><strong>Slow processing</strong> → Rebuilt to parallel scraping and a dynamic loading state. Perceived wait dropped significantly.</p></div>
         <div class="callout" style="margin-bottom:.75rem"><p><strong>Opaque scores</strong> → Added an explanation of the scoring weights. Users don't trust numbers they can't interrogate.</p></div>
-        <div class="callout" style="margin-bottom:.75rem"><p><strong>No recommendation</strong> → Added the recommended pick with written rationale. The whole point of the tool is to make a call.</p></div>
+        <div class="callout" style="margin-bottom:.75rem"><p><strong>No recommendation</strong> → Added a recommended pick with written rationale. The whole point of the tool is to make a call.</p></div>
         <div class="callout"><p><strong>Visual credibility</strong> → Full redesign pass. When you're asking someone to trust an algorithm with a purchase decision, aesthetics are a trust signal.</p></div>
       </div>
 
       <div class="cs">
         <h2>Results</h2>
-        <p>Shipped, tested with 15+ users, and iterated four times based on direct feedback. The AI review summary was the standout feature — testers consistently said it saved them the time they'd normally spend reading through hundreds of reviews to get a feel for a product. Instead of opening six tabs and spending 20 minutes comparing, they had what they needed in one place.</p>
-        <p>No metric captures this cleanly, and that's fine — not every outcome is a number. What matters is that testers found it genuinely useful, pointed to a specific feature that solved a real problem, and asked where they could use it again. That's the signal.</p>
-        <p>This project demonstrates the full PM loop independently of any employer: problem identification, user research, prioritization, design, build, test, iterate, ship. Every decision on this product traces back to something a user told me.</p>
+        <p>Shipped a working product, tested it with real users, and kept improving it based on what they told me. Every decision traces back to something from the research, the scoring algorithm, the recommendation feature, the redesign. The surveys came first, the product followed.</p>
       </div>
 
     </div>
     <aside class="case-sidebar">
       <div class="side-card">
         <h4>Research Signal</h4>
-        <div class="s-stat"><span class="s-n">100+</span><span class="s-l">User surveys before<br>writing a line of code</span></div>
-        <div class="s-stat"><span class="s-n">4</span><span class="s-l">Full iteration cycles based<br>on tester feedback</span></div>
-        <div class="s-stat"><span class="s-n">0→1</span><span class="s-l">Research to deployed product,<br>solo</span></div>
+        <div class="s-stat"><span class="s-n">50+</span><span class="s-l">User surveys before<br>writing a line of code</span></div>
+        <div class="s-stat"><span class="s-n">3</span><span class="s-l">Iteration cycles based<br>on tester feedback</span></div>
+        <div class="s-stat"><span class="s-n">0→1</span><span class="s-l">Research to<br>deployed product</span></div>
       </div>
       <div class="side-card">
         <h4>My Role</h4>
-        <p class="s-p">Solo PM, designer, and developer. Every decision traces back to a user insight — from the scoring algorithm to the visual design to the recommendation copy.</p>
+        <p class="s-p">PM, designer, and developer. Every decision traces back to something a user told me, from the scoring algorithm to the visual design.</p>
       </div>
       <div class="side-card">
         <h4>Tech Stack</h4>

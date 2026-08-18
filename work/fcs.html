@@ -20,12 +20,12 @@
     <a href="../index.html#projects" class="back">← All Projects</a>
     <div class="case-tags"><span class="case-tag">PM · Developer · QA</span><span class="case-tag">Software · ERP Integration</span><span class="case-tag">Hardware Validation</span></div>
     <h1 class="case-h1">Detection System<br><span class="blue">Configurator</span></h1>
-    <p class="case-sub">Scoped it as PM. Shipped it as a developer. Tested it against physical hardware. I replaced a brittle Excel tool with a production web platform — then took over the codebase myself, rebuilt the UI for three distinct user personas, and validated every release against real controllers in the field.</p>
+    <p class="case-sub">Designed and launched two production tools that replaced an Excel product configurator and a legacy database system, then took over development post-launch, expanding the platform into an integrated system used daily across production, engineering, and customer-facing workflows.</p>
     <div class="case-kpis">
-      <div class="kpi"><span class="kpi-n">75%</span><span class="kpi-l">Reduction in<br>configuration time</span></div>
-      <div class="kpi"><span class="kpi-n">3</span><span class="kpi-l">User personas, one<br>platform</span></div>
-      <div class="kpi"><span class="kpi-n">20</span><span class="kpi-l">Test cases with<br>hardware validation</span></div>
-      <div class="kpi"><span class="kpi-n">Zero</span><span class="kpi-l">Excel tools<br>remaining</span></div>
+      <div class="kpi"><span class="kpi-n">75%</span><span class="kpi-l">Configuration time<br>reduction (~2hrs to 30min)</span></div>
+      <div class="kpi"><span class="kpi-n">~10%</span><span class="kpi-l">Unit build time reduction<br>in production</span></div>
+      <div class="kpi"><span class="kpi-n">2</span><span class="kpi-l">User teams served by<br>one integrated platform</span></div>
+      <div class="kpi"><span class="kpi-n">3</span><span class="kpi-l">Development phases<br>across both tools</span></div>
     </div>
   </div>
 </header>
@@ -36,26 +36,21 @@
 
       <div class="cs">
         <h2>The Problem</h2>
-        <p>Controller configurations were built in a brittle Excel macro workbook. Large jobs took nearly two hours of senior engineering time. Hardware constraints lived in engineers' heads, not in the tool — and every error became a support ticket. The process didn't scale, and it was costing the team time they didn't have.</p>
+        <p>Application engineers were building controller configurations in an Excel macro workbook, while production was managing device files and order data through a separate legacy database system. Two tools, overlapping data, no connection between them. Large configurations took nearly two hours of engineering time, the tool was slow and brittle running on VBA, and every error became a support ticket. On the production side, device configurations had to be loaded individually even for large systems, and serial numbers were tracked in a paper logbook. Neither tool scaled.</p>
         <figure class="cs-img"><img src="../assets/fcs-excel.png" alt="Excel configurator" loading="lazy"/><figcaption>The tool it replaced — brittle under real project complexity</figcaption></figure>
       </div>
 
       <div class="cs">
         <h2>Phase 1 — PM</h2>
-        <p>I scoped the product, defined the ERP data model, and managed an external developer to build the first version — a validated web configurator integrated with the company's ERP system (Microsoft Business Central). Key architecture decision: keep configuration metadata out of the ERP core to avoid bloat, while keeping BC as the source of truth for products, pricing, and fulfillment.</p>
-        <p>I used MagicPatterns for rapid UX prototyping before development, aligning stakeholders on the interface before a single line of code was written. Excel was deprecated on launch day — no rollback path.</p>
+        <p>I scoped the product, defined the ERP data model, and managed an external developer to build the first version, a web configurator integrated with Microsoft Business Central. The core architecture decision was to keep configuration metadata separate from the ERP core to avoid bloat, while keeping Business Central as the source of truth for products, pricing, and fulfillment. We also set up the Supabase database from the start to support the configurator, which later became the foundation for the full production database system.</p>
+        <p>Before any code was written, I prototyped the UI in MagicPatterns to get stakeholder buy-in on the interface. Excel was deprecated on launch day with no fallback.</p>
         <figure class="cs-img"><img src="../assets/fcs-magicpatterns.png" alt="MagicPatterns prototype" loading="lazy"/><figcaption>Early prototype — UI aligned with stakeholders before build</figcaption></figure>
       </div>
 
       <div class="cs">
-        <h2>Phase 2 — PM + Developer + QA</h2>
-        <p>After launch, I took over the codebase entirely and rebuilt the UI for three distinct user personas — each with different mental models and workflows:</p>
-        <ul>
-          <li><strong>Production team</strong> — speed and zero ambiguity. Configures units at volume. Every extra click is friction that compounds across hundreds of units.</li>
-          <li><strong>Application engineers</strong> — full technical control. Designs complex multi-zone systems with multiple controllers, channels, and priorities.</li>
-          <li><strong>Customers</strong> — clarity without product knowledge. Reviews and approves configurations without needing to know what an FCS controller is.</li>
-        </ul>
-        <p>I also built and maintained the Supabase backend (auth, data persistence, project state) and the full Business Central integration.</p>
+        <h2>Phase 2 — PM</h2>
+        <p>After launch, I took over the frontend codebase and rebuilt the UI to serve application engineers, who needed full technical control to design complex multi-zone systems with multiple controllers, channels, and priorities.</p>
+        <p>I also set up a bug and feature request ticketing system to triage and prioritize issues coming in from the team.</p>
         <div class="img-2col">
           <figure class="cs-img"><img src="../assets/fcs-dashboard.png" alt="Dashboard" loading="lazy"/><figcaption>Dashboard — live project overview and activity feed</figcaption></figure>
           <figure class="cs-img"><img src="../assets/fcs-area-detail.png" alt="Area detail" loading="lazy"/><figcaption>Area detail — controller configuration and export</figcaption></figure>
@@ -64,21 +59,17 @@
 
       <div class="cs">
         <h2>Phase 3 — Platform Expansion: Production Database</h2>
-        <p>After establishing the configurator, I expanded the platform into a second tool: a production database that replaced both a paper-based process and a costly legacy database system with unclean, unstructured data accumulated over ~20 years.</p>
+        <p>After the configurator launched, I scoped and oversaw the development of a second tool: a production database that replaced both the paper logbook and a legacy database system that had accumulated ~20 years of unstructured data.</p>
+        <p>The database serves the production team, who converts sales orders to work orders, stores device configuration files, and auto-detects units by serial number and Modbus ID. Bulk drag-and-drop replaced one-by-one manual file loading, cutting unit build time by ~10%.</p>
         <div class="img-2col">
-          <figure class="cs-img"><img src="../assets/prod-db-projects.png" alt="Production database projects view" loading="lazy"/><figcaption>Projects view — 377 active projects linked to sales orders from Business Central</figcaption></figure>
-          <figure class="cs-img"><img src="../assets/prod-db-devices.png" alt="All devices lookup" loading="lazy"/><figcaption>All Devices — 1,947 devices searchable by serial, type, model, and source</figcaption></figure>
+          <figure class="cs-img"><img src="../assets/prod-db-projects.png" alt="Production database projects view" loading="lazy"/><figcaption>Projects view — active projects linked to sales orders from Business Central</figcaption></figure>
+          <figure class="cs-img"><img src="../assets/prod-db-devices.png" alt="All devices lookup" loading="lazy"/><figcaption>All Devices — searchable by serial, type, model, and source</figcaption></figure>
         </div>
-        <figure class="cs-img"><img src="../assets/prod-db-serialization.png" alt="Device serialization" loading="lazy"/><figcaption>Device serialization — controllers and detectors configured and tracked by serial number and Modbus ID</figcaption></figure>
-        <p>The database serves two personas with different needs:</p>
-        <ul>
-          <li><strong>Production team</strong> — converts sales orders to work orders, stores device configuration files (XML), and auto-detects units by serial number and Modbus ID. Bulk drag-and-drop replaced one-by-one manual file loading — cutting unit build time by ~10%</li>
-          <li><strong>Application engineers</strong> — look up device configuration history, analyze trends to diagnose field issues, and access hardware data like sensor information across all units in the system</li>
-        </ul>
+        <figure class="cs-img"><img src="../assets/prod-db-serialization.png" alt="Device serialization" loading="lazy"/><figcaption>Device serialization — controllers and detectors tracked by serial number and Modbus ID</figcaption></figure>
         <div class="callout">
-          <p><strong>The key architectural decision:</strong> I merged the production database with the configurator's Supabase backend, sharing the same holding register tables. This means a controller configuration created by an application engineer flows directly into production with zero manual re-entry — critical for complex, non-default systems with customer-specific requirements.</p>
+          <p>The key architectural decision was to merge the production database with the configurator Supabase backend, sharing the same holding register tables. This means a controller configuration created by an application engineer flows directly into production with zero manual re-entry, critical for complex, non-default systems with customer-specific requirements.</p>
         </div>
-        <p>The consolidation also cleaned up ~20 years of unstructured legacy data into a schema purpose-built for how production and application engineers actually search — with custom fields designed around their real workflows, not inherited from a system built for a different era.</p>
+        <p>The consolidation cleaned up ~20 years of unstructured legacy data into a searchable schema with custom fields built around how production and application engineers actually work.</p>
       </div>
 
       <div class="cs">
@@ -87,7 +78,7 @@
         <ul>
           <li>Wrote 20 structured test cases covering edge cases, constraint violations, and standard production configurations</li>
           <li>Used AI-assisted regression testing to validate .cfg output after every UI change or bug fix</li>
-          <li>Built a bug ticketing system — personally investigated and resolved every issue filed</li>
+          <li>Built a bug ticketing system, prioritized issues, resolved some personally and worked with a developer to close the rest</li>
           <li>Personally loaded exported .cfg files onto physical controllers and validated behavior for every test case</li>
         </ul>
         <div class="callout">
@@ -98,13 +89,11 @@
       <div class="cs">
         <h2>Results</h2>
         <ul>
-          <li>75%+ reduction in configuration time — large jobs from ~2 hours to under 30 minutes</li>
-          <li>Production database replaced a paper process and a costly legacy system — consolidating ~20 years of unstructured data into a clean, searchable schema</li>
-          <li>Zero manual re-entry for complex configurations — application engineer configurations flow directly into production build through the shared database architecture</li>
-          <li>Manual configuration eliminated across the production team</li>
-          <li>Full internal adoption: production, application engineers, and customer-facing workflows</li>
-          <li>Excel tool fully deprecated with no rollback</li>
-          <li>Platform now expanding to cover detector configuration — scope continues to grow</li>
+          <li>75%+ reduction in configuration time, large jobs from ~2 hours to under 30 minutes</li>
+          <li>~10% reduction in unit build time through the production database</li>
+          <li>Production database replaced a paper process and a costly legacy system, consolidating ~20 years of unstructured data into a clean, searchable schema</li>
+          <li>Zero manual re-entry for complex configurations, application engineer configurations flow directly into production through the shared database</li>
+          <li>Full internal adoption across production and application engineering teams</li>
         </ul>
       </div>
 
@@ -112,13 +101,13 @@
     <aside class="case-sidebar">
       <div class="side-card">
         <h4>Impact</h4>
-        <div class="s-stat"><span class="s-n">75%</span><span class="s-l">Reduction in configuration<br>time (~2hrs → under 30min)</span></div>
-        <div class="s-stat"><span class="s-n">~10%</span><span class="s-l">Unit build time reduction via<br>production database</span></div>
-        <div class="s-stat"><span class="s-n">3</span><span class="s-l">User personas across<br>one integrated platform</span></div>
+        <div class="s-stat"><span class="s-n">75%</span><span class="s-l">Configuration time reduction<br>(~2hrs to under 30min)</span></div>
+        <div class="s-stat"><span class="s-n">~10%</span><span class="s-l">Unit build time reduction<br>in production</span></div>
+        <div class="s-stat"><span class="s-n">2</span><span class="s-l">User teams served by<br>one integrated platform</span></div>
       </div>
       <div class="side-card">
         <h4>My Role</h4>
-        <p class="s-p"><strong>Phase 1 (PM):</strong> Product scope, UX design, ERP data modeling, external dev management, launch.<br><br><strong>Phase 2 (PM + Dev + QA):</strong> Took over the codebase, rebuilt the UI, built the backend, wrote the test suite, validated on hardware.</p>
+        <p class="s-p">Phase 1 (PM): Product scope, UX design, ERP data modeling, external dev management, launch. Phase 2 (PM): Took over the frontend codebase, rebuilt the UI for application engineers, set up bug ticketing, validated releases on physical hardware. Phase 3 (PM): Scoped and oversaw the production database, designed the architecture to merge with the configurator backend, eliminating manual re-entry between engineering and production.</p>
       </div>
       <div class="side-card">
         <h4>Tech Stack</h4>
@@ -126,7 +115,7 @@
       </div>
       <div class="side-card">
         <h4>Skills Demonstrated</h4>
-        <div class="s-tags"><span>Product Management</span><span>UX Design</span><span>Full-Stack Development</span><span>ERP Integration</span><span>QA &amp; Testing</span><span>Technical Product Management</span><span>Hardware Validation</span></div>
+        <div class="s-tags"><span>Product Management</span><span>UX Design</span><span>Frontend Development</span><span>ERP Integration</span><span>QA &amp; Testing</span><span>Hardware Validation</span><span>Database Architecture</span><span>Cross-Functional Leadership</span></div>
       </div>
     </aside>
   </div>
