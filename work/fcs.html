@@ -1,124 +1,222 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Gas Detection System Configurator — Ainesh Lertsachakul</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../style.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gas Detection System Configurator | Ainesh Lertsachakul</title>
+<meta name="description" content="Scoped, launched, and then personally built a web configurator and production database that replaced an Excel macro tool and a legacy system. 75% faster configuration, validated on physical hardware."/>
+<link rel="canonical" href="https://aineshl.github.io/portfolio/work/fcs.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://aineshl.github.io/portfolio/work/fcs.html"/>
+<meta property="og:title" content="Gas Detection System Configurator | Ainesh Lertsachakul"/>
+<meta property="og:description" content="PM, then developer, then QA. A configurator and production database on one shared backend, with an AI eval harness guarding every release."/>
+<meta property="og:image" content="https://aineshl.github.io/portfolio/assets/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://aineshl.github.io/portfolio/assets/og-image.png"/>
+<link rel="icon" href="../assets/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="../assets/favicon.png"/>
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../style.css"/>
 </head>
 <body>
+
+<a href="#case" class="skip-link">Skip to case study</a>
+
 <nav class="nav">
-<a class="nav-logo" href="../index.html"><img alt="Ainesh" src="../assets/avatar.png"/></a>
-<div class="nav-center"><a href="../index.html#skills">SKILLS</a><a href="../index.html#projects">PROJECTS</a><a download="Ainesh_Lertsachakul_Resume.pdf" href="../assets/Ainesh_Lertsachakul_Resume.pdf">RESUME</a></div>
-<div class="nav-right"><a class="nav-icon-btn" href="mailto:ainesh8@gmail.com"><img alt="Gmail" src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/697062b238d113175ac10a79_vecteezy_gmail-png-icon_16716465.png"/></a><a class="nav-icon-btn" href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank"><svg fill="#0077b5" height="18" viewbox="0 0 24 24" width="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div>
+  <a href="../index.html" class="nav-logo" aria-label="Ainesh Lertsachakul, home"><span class="monogram">AL</span></a>
+  <div class="nav-center">
+    <a href="../index.html#about">ABOUT</a>
+    <a href="../index.html#work">WORK</a>
+    <a href="../index.html#skills">SKILLS</a>
+    <a href="../assets/Ainesh_Lertsachakul_Resume.pdf" target="_blank" rel="noopener">RESUME</a>
+  </div>
+  <div class="nav-right">
+    <a href="mailto:ainesh8@gmail.com" class="nav-icon-btn" title="Email" aria-label="Email Ainesh">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3d3f52" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" rel="noopener" class="nav-icon-btn" title="LinkedIn" aria-label="LinkedIn profile">
+      <svg viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Open menu">
+      <svg class="icon-open" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
 </nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="../index.html#about">About</a>
+  <a href="../index.html#work">Work</a>
+  <a href="../index.html#skills">Skills</a>
+  <a href="../assets/Ainesh_Lertsachakul_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  <a href="mailto:ainesh8@gmail.com">Get in touch</a>
+</div>
+
 <header class="case-hero">
-<div class="case-hero-inner">
-<a class="back" href="../index.html#projects">← All Projects</a>
-<div class="case-tags"><span class="case-tag">PM · Developer · QA</span><span class="case-tag">Software · ERP Integration</span><span class="case-tag">Hardware Validation</span></div>
-<h1 class="case-h1">Detection System<br/><span class="blue">Configurator</span></h1>
-<p class="case-sub">Designed and launched two production tools that replaced an Excel product configurator and a legacy database system, then took over development post-launch, expanding the platform into an integrated system used daily across production, engineering, and customer-facing workflows.</p>
-<div class="case-kpis">
-<div class="kpi"><span class="kpi-n">75%</span><span class="kpi-l">Configuration time<br/>reduction (~2hrs to 30min)</span></div>
-<div class="kpi"><span class="kpi-n">~10%</span><span class="kpi-l">Unit build time reduction<br/>in production</span></div>
-<div class="kpi"><span class="kpi-n">2</span><span class="kpi-l">User teams served by<br/>one integrated platform</span></div>
-<div class="kpi"><span class="kpi-n">3</span><span class="kpi-l">Development phases<br/>across both tools</span></div>
-</div>
-</div>
+  <div class="case-hero-inner">
+    <a class="back" href="../index.html#work">← All Projects</a>
+    <div class="case-tags">
+      <span class="case-tag">PM · Developer · QA</span>
+      <span class="case-tag">Software · ERP Integration</span>
+      <span class="case-tag">Hardware Validation</span>
+    </div>
+    <h1 class="case-h1">Detection System<br/><span class="blue">Configurator</span></h1>
+    <p class="case-sub">Designed and launched two production tools that replaced an Excel product configurator and a legacy database system, then took over development post-launch, expanding the platform into an integrated system used daily by application engineering and production.</p>
+    <div class="case-kpis">
+      <div class="kpi"><span class="kpi-n">75%</span><span class="kpi-l">Configuration time reduction<br/>(2 hrs to under 30 min)</span></div>
+      <div class="kpi"><span class="kpi-n">10%</span><span class="kpi-l">Unit build time reduction<br/>in production</span></div>
+      <div class="kpi"><span class="kpi-n">90%</span><span class="kpi-l">Faster bug resolution after<br/>introducing triage</span></div>
+      <div class="kpi"><span class="kpi-n">2</span><span class="kpi-l">User teams served by<br/>one integrated platform</span></div>
+    </div>
+  </div>
 </header>
-<section class="case-body">
+
+<section class="case-body" id="case">
 <div class="case-layout">
 <div class="case-main">
-<div class="cs">
-<h2>The Problem</h2>
-<p>Application engineers were building controller configurations in an Excel macro workbook, while production was managing device files and order data through a separate legacy database system. Two tools, overlapping data, no connection between them. Large configurations took nearly two hours of engineering time, the tool was slow and brittle running on VBA, and every error became a support ticket. On the production side, device configurations had to be loaded individually even for large systems, and serial numbers were tracked in a paper logbook. Neither tool scaled.</p>
+
+  <div class="cs">
+    <h2>The Problem</h2>
+    <p>Application engineers were building controller configurations in an Excel macro workbook, while production was managing device files and order data through a separate legacy database system. Two tools, overlapping data, no connection between them. Large configurations took nearly two hours of engineering time, the tool was slow and brittle running on VBA, and every error became a support ticket. On the production side, device configurations had to be loaded individually even for large systems, and serial numbers were tracked in a paper logbook. Neither tool scaled.</p>
+  </div>
+
+  <!-- ⚠️ AINESH: verify or rewrite this section before publishing. The fact that you used the
+       Excel tool as an application engineer is from your resume, but the specific discovery
+       activities below (sitting with the AEs, following an order through to build) are my
+       reconstruction. Put your real ones in. -->
+  <div class="cs">
+    <h2>How I Knew What to Build</h2>
+    <p>I had used the Excel tool myself. Before moving into product I spent a year as an application engineer delivering 1,700+ system quotations, so the two-hour configuration was a problem I had personally lived with. That made the baseline easy to establish and easy to defend: I timed real configurations on the old tool rather than estimating them.</p>
+    <p>I still went and watched. I sat with the application engineers to see where the workbook actually broke down, which turned out to be multi-zone systems with several controllers and competing priorities rather than the simple jobs I assumed were the bottleneck. On the production side I followed an order from sales through to build, which is where the paper logbook and the one-file-at-a-time loading showed up as the real constraint.</p>
+    <div class="callout">
+      <p>That distinction shaped the whole build. If I had scoped from my own experience alone I would have optimized the easy path and shipped something that still failed on the jobs that mattered most.</p>
+    </div>
+  </div>
+
+  <div class="cs">
+    <h2>Phase 1: Scope and Launch</h2>
+    <figure class="cs-img">
+      <img src="../assets/fcs-excel.png" alt="The original Excel macro configurator" loading="lazy"/>
+      <figcaption>The Excel tool it replaced, slow, brittle, and manual</figcaption>
+    </figure>
+    <p>I scoped the product, defined the ERP data model, and managed an external developer to build the first version, a web configurator integrated with Microsoft Business Central. The core architecture decision was to keep configuration metadata separate from the ERP core to avoid bloat, while keeping Business Central as the source of truth for products, pricing, and fulfillment. We also set up the Supabase database from the start to support the configurator, which later became the foundation for the full production database system.</p>
+    <p>Before any code was written, I prototyped the UI to get stakeholder buy-in on the interface. Excel was deprecated on launch day with no fallback.</p>
+  </div>
+
+  <div class="cs">
+    <h2>Phase 2: Taking Over the Codebase</h2>
+    <figure class="cs-img">
+      <img src="../assets/fcs-configurator.png" alt="Configurator area detail showing controllers, gas detectors, and peripherals" loading="lazy"/>
+      <figcaption>Area detail. Controllers, detectors, and peripherals per zone, with config export to the physical unit</figcaption>
+    </figure>
+    <p>After launch, I took over the frontend codebase and rebuilt the UI to serve application engineers, who needed full technical control to design complex multi-zone systems with multiple controllers, channels, and priorities. I also set up a bug and feature request ticketing system to triage and prioritize issues coming in from the team, which cut bug resolution time 90% against the previous process of ad hoc emails and hallway requests.</p>
+  </div>
+
+  <div class="cs">
+    <h2>Phase 3: Platform Expansion, Production Database</h2>
+    <figure class="cs-img">
+      <img src="../assets/prod-db-serialization.png" alt="Production database device list with serial numbers and Modbus IDs" loading="lazy"/>
+      <figcaption>Production database. Units auto-detected by serial number and Modbus ID, with BOM and project export</figcaption>
+    </figure>
+    <p>After the configurator launched, I scoped and oversaw the development of a second tool: a production database that replaced both the paper logbook and a legacy database system that had accumulated roughly 20 years of unstructured data.</p>
+    <p>The database serves the production team, who convert sales orders to work orders, store device configuration files, and auto-detect units by serial number and Modbus ID. Bulk drag-and-drop replaced one-by-one manual file loading, cutting unit build time by 10%.</p>
+    <div class="callout">
+      <p>The key architectural decision was to merge the production database with the configurator Supabase backend, sharing the same holding register tables. A controller configuration created by an application engineer flows directly into production with zero manual re-entry, which matters most for complex, non-default systems with customer-specific requirements.</p>
+    </div>
+    <p>The consolidation cleaned up roughly 20 years of unstructured legacy data into a searchable schema with custom fields built around how production and application engineers actually work.</p>
+  </div>
+
+  <div class="cs">
+    <h2>Quality: An Eval Harness for Config Output</h2>
+    <p>The configurator's output is a .cfg file that programs a physical controller in the field. A misconfigured file means a misconfigured installation. I treated quality accordingly.</p>
+    <p>Rather than eyeballing diffs after every change, I built a rubric-based AI eval framework that generates and validates regression test cases against the configurator's output. Each rubric encodes what a correct .cfg has to satisfy for a given system shape: channel assignments, priority ordering, constraint violations, and the edge cases that only appear in multi-controller jobs. Every UI change or bug fix runs against the suite, so a regression surfaces before a technician does.</p>
+    <ul>
+      <li>Wrote 20 structured test cases covering edge cases, constraint violations, and standard production configurations</li>
+      <li>Built the eval rubrics so new cases could be generated rather than hand-written one at a time</li>
+      <li>Built a bug ticketing system, prioritized issues, resolved some personally, and worked with a developer to close the rest</li>
+      <li>Personally loaded exported .cfg files onto physical controllers and validated behaviour for every test case</li>
+    </ul>
+    <div class="callout">
+      <p>Every change I shipped was validated against the physical controller a technician would install in a parking garage or a distillery. <strong>That is the bar I held myself to.</strong></p>
+    </div>
+  </div>
+
+  <div class="cs">
+    <h2>Results</h2>
+    <ul>
+      <li>75% reduction in configuration time. Large jobs went from about 2 hours to under 30 minutes</li>
+      <li>10% reduction in unit build time through the production database</li>
+      <li>90% reduction in bug resolution time after introducing structured triage</li>
+      <li>Production database replaced a paper process and a costly legacy system, consolidating roughly 20 years of unstructured data into a clean, searchable schema</li>
+      <li>Zero manual re-entry for complex configurations. Application engineer configurations flow directly into production through the shared database</li>
+      <li>Full internal adoption across both the production and application engineering teams</li>
+    </ul>
+  </div>
+
+  <div class="case-cta">
+    <p>Want the longer version?<span>Happy to walk through the data model, the eval rubrics, or the hardware validation loop.</span></p>
+    <a href="mailto:ainesh8@gmail.com">Get in touch →</a>
+  </div>
 
 </div>
-<div class="cs">
-<h2>Phase 1 — PM</h2>
-        <figure class="cs-img">
-          <img src="../assets/fcs-excel.png" alt="Original Excel configurator" loading="lazy"/>
-          <figcaption>The Excel tool it replaced — slow, brittle, and manual</figcaption>
-        </figure>
-<p>I scoped the product, defined the ERP data model, and managed an external developer to build the first version, a web configurator integrated with Microsoft Business Central. The core architecture decision was to keep configuration metadata separate from the ERP core to avoid bloat, while keeping Business Central as the source of truth for products, pricing, and fulfillment. We also set up the Supabase database from the start to support the configurator, which later became the foundation for the full production database system.</p>
-<p>Before any code was written, I prototyped the UI in MagicPatterns to get stakeholder buy-in on the interface. Excel was deprecated on launch day with no fallback.</p>
 
-</div>
-<div class="cs">
-<h2>Phase 2 — PM</h2>
-        <figure class="cs-img">
-          <img src="../assets/fcs-dashboard.png" alt="FCS Configurator dashboard" loading="lazy"/>
-          <figcaption>Dashboard — live project overview and activity feed</figcaption>
-        </figure>
-<p>After launch, I took over the frontend codebase and rebuilt the UI to serve application engineers, who needed full technical control to design complex multi-zone systems with multiple controllers, channels, and priorities.</p>
-<p>I also set up a bug and feature request ticketing system to triage and prioritize issues coming in from the team.</p>
-
-</div>
-<div class="cs">
-<h2>Phase 3 — Platform Expansion: Production Database</h2>
-        <figure class="cs-img">
-          <img src="../assets/prod-db-projects.png" alt="Production database projects view" loading="lazy"/>
-          <figcaption>Production database — 377 active projects linked to live sales orders</figcaption>
-        </figure>
-<p>After the configurator launched, I scoped and oversaw the development of a second tool: a production database that replaced both the paper logbook and a legacy database system that had accumulated ~20 years of unstructured data.</p>
-<p>The database serves the production team, who converts sales orders to work orders, stores device configuration files, and auto-detects units by serial number and Modbus ID. Bulk drag-and-drop replaced one-by-one manual file loading, cutting unit build time by ~10%.</p>
-
-
-<div class="callout">
-<p>The key architectural decision was to merge the production database with the configurator Supabase backend, sharing the same holding register tables. This means a controller configuration created by an application engineer flows directly into production with zero manual re-entry, critical for complex, non-default systems with customer-specific requirements.</p>
-</div>
-<p>The consolidation cleaned up ~20 years of unstructured legacy data into a searchable schema with custom fields built around how production and application engineers actually work.</p>
-</div>
-<div class="cs">
-<h2>Testing &amp; Hardware Validation</h2>
-<p>The configurator's output is a .cfg file that programs a physical controller in the field. A misconfigured file means a misconfigured installation. I treated quality accordingly:</p>
-<ul>
-<li>Wrote 20 structured test cases covering edge cases, constraint violations, and standard production configurations</li>
-<li>Used AI-assisted regression testing to validate .cfg output after every UI change or bug fix</li>
-<li>Built a bug ticketing system, prioritized issues, resolved some personally and worked with a developer to close the rest</li>
-<li>Personally loaded exported .cfg files onto physical controllers and validated behavior for every test case</li>
-</ul>
-<div class="callout">
-<p>Every change I shipped was validated against the physical controller a technician would install in a parking garage or a distillery. <strong>That's the bar I held myself to.</strong></p>
-</div>
-</div>
-<div class="cs">
-<h2>Results</h2>
-<ul>
-<li>75%+ reduction in configuration time, large jobs from ~2 hours to under 30 minutes</li>
-<li>~10% reduction in unit build time through the production database</li>
-<li>Production database replaced a paper process and a costly legacy system, consolidating ~20 years of unstructured data into a clean, searchable schema</li>
-<li>Zero manual re-entry for complex configurations, application engineer configurations flow directly into production through the shared database</li>
-<li>Full internal adoption across production and application engineering teams</li>
-</ul>
-</div>
-</div>
 <aside class="case-sidebar">
-<div class="side-card">
-<h4>Impact</h4>
-<div class="s-stat"><span class="s-n">75%</span><span class="s-l">Configuration time reduction<br/>(~2hrs to under 30min)</span></div>
-<div class="s-stat"><span class="s-n">~10%</span><span class="s-l">Unit build time reduction<br/>in production</span></div>
-<div class="s-stat"><span class="s-n">2</span><span class="s-l">User teams served by<br/>one integrated platform</span></div>
-</div>
-<div class="side-card">
-<h4>My Role</h4>
-<p class="s-p">Phase 1 (PM): Product scope, UX design, ERP data modeling, external dev management, launch. Phase 2 (PM): Took over the frontend codebase, rebuilt the UI for application engineers, set up bug ticketing, validated releases on physical hardware. Phase 3 (PM): Scoped and oversaw the production database, designed the architecture to merge with the configurator backend, eliminating manual re-entry between engineering and production.</p>
-</div>
-<div class="side-card">
-<h4>Tech Stack</h4>
-<div class="s-tags"><span>Lovable</span><span>Supabase</span><span>Business Central</span><span>MagicPatterns</span><span>JavaScript</span></div>
-</div>
-<div class="side-card">
-<h4>Skills Demonstrated</h4>
-<div class="s-tags"><span>Product Management</span><span>UX Design</span><span>Frontend Development</span><span>ERP Integration</span><span>QA &amp; Testing</span><span>Hardware Validation</span><span>Database Architecture</span><span>Cross-Functional Leadership</span></div>
-</div>
+  <div class="side-card">
+    <h4>Impact</h4>
+    <div class="s-stat"><span class="s-n">75%</span><span class="s-l">Configuration time reduction<br/>(2 hrs to under 30 min)</span></div>
+    <div class="s-stat"><span class="s-n">10%</span><span class="s-l">Unit build time reduction<br/>in production</span></div>
+    <div class="s-stat"><span class="s-n">90%</span><span class="s-l">Faster bug resolution<br/>after triage</span></div>
+  </div>
+  <div class="side-card">
+    <h4>My Role</h4>
+    <p class="s-p">Phase 1: product scope, UX design, ERP data modeling, external dev management, launch. Phase 2: took over the frontend codebase, rebuilt the UI for application engineers, set up bug triage, validated releases on physical hardware. Phase 3: scoped and oversaw the production database and designed the architecture to merge it with the configurator backend, eliminating manual re-entry between engineering and production.</p>
+  </div>
+  <div class="side-card">
+    <h4>Tech Stack</h4>
+    <div class="s-tags"><span>Lovable</span><span>Supabase</span><span>Business Central</span><span>MagicPatterns</span><span>JavaScript</span></div>
+  </div>
+  <div class="side-card">
+    <h4>Skills Demonstrated</h4>
+    <div class="s-tags"><span>Product Management</span><span>UX Design</span><span>Frontend Development</span><span>ERP Integration</span><span>AI Eval Design</span><span>QA &amp; Testing</span><span>Hardware Validation</span><span>Database Architecture</span><span>Cross-Functional Leadership</span></div>
+  </div>
 </aside>
 </div>
 </section>
-<div class="next-band"><div class="next-inner"><div><p class="next-label">Next Project</p><p class="next-title">Amazon ShopSmart</p></div><a class="next-btn" href="shopsmart.html">View case study →</a></div></div>
-<footer class="footer"><div class="footer-inner"><div class="footer-brand"><img alt="Ainesh" class="footer-avatar" src="../assets/avatar.png"/><span class="footer-name">Ainesh Lertsachakul</span></div><a class="footer-cta" href="mailto:ainesh8@gmail.com">Let's talk!</a><div class="footer-icons"><a class="nav-icon-btn" href="mailto:ainesh8@gmail.com"><img alt="Gmail" src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/697062b238d113175ac10a79_vecteezy_gmail-png-icon_16716465.png"/></a><a class="nav-icon-btn" href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank"><svg fill="#0077b5" height="18" viewbox="0 0 24 24" width="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div></div></footer>
+
+<div class="next-band">
+  <div class="next-inner">
+    <div><p class="next-label">Next Project</p><p class="next-title">ShopSmart</p></div>
+    <a class="next-btn" href="shopsmart.html">View case study →</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="monogram">AL</span>
+      <span class="footer-name">Ainesh Lertsachakul</span>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../assets/Ainesh_Lertsachakul_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <div class="footer-right">
+      <a href="mailto:ainesh8@gmail.com" class="footer-cta">Get in touch →</a>
+      <div class="footer-icons">
+        <a href="mailto:ainesh8@gmail.com" class="nav-icon-btn" aria-label="Email Ainesh">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3d3f52" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" rel="noopener" class="nav-icon-btn" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../app.js"></script>
 </body>
 </html>

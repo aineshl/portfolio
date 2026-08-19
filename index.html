@@ -3,7 +3,27 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ainesh Lertsachakul — Product Manager</title>
+<title>Ainesh Lertsachakul | Product Manager</title>
+<meta name="description" content="Product Manager owning discovery, roadmap, delivery, and go-to-market across five product lines. Zero-to-one hardware, production software, and the prioritization system behind both."/>
+<link rel="canonical" href="https://aineshl.github.io/portfolio/"/>
+
+<!-- Social share card -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://aineshl.github.io/portfolio/"/>
+<meta property="og:title" content="Ainesh Lertsachakul | Product Manager"/>
+<meta property="og:description" content="Discovery, roadmap, delivery, and go-to-market across five product lines. Zero-to-one hardware, production software, and the prioritization system behind both."/>
+<meta property="og:image" content="https://aineshl.github.io/portfolio/assets/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Ainesh Lertsachakul | Product Manager"/>
+<meta name="twitter:description" content="Discovery, roadmap, delivery, and go-to-market across five product lines."/>
+<meta name="twitter:image" content="https://aineshl.github.io/portfolio/assets/og-image.png"/>
+
+<link rel="icon" href="assets/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="assets/favicon.png"/>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png"/>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -11,36 +31,55 @@
 </head>
 <body>
 
+<a href="#work" class="skip-link">Skip to work</a>
+
 <!-- NAV -->
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <img src="assets/avatar.png" alt="Ainesh"/>
+  <a href="index.html" class="nav-logo" aria-label="Ainesh Lertsachakul, home">
+    <span class="monogram">AL</span>
   </a>
   <div class="nav-center">
+    <a href="#about">ABOUT</a>
+    <a href="#work">WORK</a>
     <a href="#skills">SKILLS</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="assets/Ainesh_Lertsachakul_Resume.pdf" download="Ainesh_Lertsachakul_Resume.pdf">RESUME</a>
+    <a href="assets/Ainesh_Lertsachakul_Resume.pdf" target="_blank" rel="noopener">RESUME</a>
   </div>
   <div class="nav-right">
-    <a href="mailto:ainesh8@gmail.com" class="nav-icon-btn" title="Email">
-      <img src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/697062b238d113175ac10a79_vecteezy_gmail-png-icon_16716465.png" alt="Gmail"/>
+    <a href="mailto:ainesh8@gmail.com" class="nav-icon-btn" title="Email" aria-label="Email Ainesh">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3d3f52" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
     </a>
-    <a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" class="nav-icon-btn" title="LinkedIn">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    <a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" rel="noopener" class="nav-icon-btn" title="LinkedIn" aria-label="LinkedIn profile">
+      <svg viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
     </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Open menu">
+      <svg class="icon-open" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
   </div>
 </nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="#about">About</a>
+  <a href="#work">Work</a>
+  <a href="#skills">Skills</a>
+  <a href="assets/Ainesh_Lertsachakul_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  <a href="mailto:ainesh8@gmail.com">Get in touch</a>
+</div>
 
 <!-- HERO -->
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <h1 class="hero-h1">Tech. Business.<br><span class="blue">Product.</span></h1>
-      <p class="hero-body">Product Manager who owns products end to end, from talking to customers and understanding the problem, to building the roadmap, shipping the product, and taking it to market. I've built product operating systems, led zero-to-one hardware programs, shipped production software, and presented roadmaps to 100+ customers at a major North American trade show.</p>
-      <a href="#projects" class="hero-btn">See My Work →</a>
+      <h1 class="hero-h1">Engineer first.<br><span class="blue">Product now.</span></h1>
+      <p class="hero-body">I own product end to end across five product lines: customer discovery, the business case, the PRD, the sprints, and the launch. I came to product from engineering, where I spent a year as the person customers called when a system had to work. That is still how I build. Talk to the people who use it, then make sure it actually works.</p>
+      <div class="hero-actions">
+        <a href="#work" class="hero-btn">See my work →</a>
+        <a href="assets/Ainesh_Lertsachakul_Resume.pdf" target="_blank" rel="noopener" class="hero-btn-ghost">Resume</a>
+      </div>
     </div>
     <div class="hero-photo">
-      <img src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/69705bc155899b9e5ae2de13_headshot.png" alt="Ainesh Lertsachakul"/>
+      <!-- TODO: save this image into assets/headshot.png and switch the src to a local path.
+           It is currently hotlinked from a third-party CDN that Ainesh does not control. -->
+      <img src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/69705bc155899b9e5ae2de13_headshot.png" alt="Ainesh Lertsachakul" onerror="this.closest('.hero-photo').style.display='none'"/>
     </div>
   </div>
 </header>
@@ -48,81 +87,49 @@
 <!-- STATS -->
 <div class="stats">
   <div class="stats-inner">
-    <div class="stat"><span class="stat-n">~2 yrs</span><span class="stat-l">End-to-end PM experience</span></div>
-    <div class="stat"><span class="stat-n">~71%</span><span class="stat-l">Cost reduction on hardware redesign</span></div>
-    <div class="stat"><span class="stat-n">~19%</span><span class="stat-l">Engineering throughput gain over 17 sprints</span></div>
-    <div class="stat"><span class="stat-n">3</span><span class="stat-l">Products shipped end-to-end</span></div>
+    <div class="stat"><span class="stat-n">5</span><span class="stat-l">Product lines owned</span></div>
+    <div class="stat"><span class="stat-n">71%</span><span class="stat-l">Unit cost reduction on an in-house hardware redesign</span></div>
+    <div class="stat"><span class="stat-n">130+</span><span class="stat-l">Ideas and bugs prioritized into a single backlog</span></div>
+    <div class="stat"><span class="stat-n">17</span><span class="stat-l">Consecutive sprints planned and shipped</span></div>
   </div>
 </div>
 
-<!-- AHR VEGAS STRIP -->
-<div class="ahr-strip">
-  <div class="ahr-inner">
-    <div class="ahr-photo">
-      <img src="assets/ahr-vegas.jpg" alt="Presenting at AHR Expo Las Vegas"/>
-    </div>
-    <div class="ahr-text">
-      <p class="ahr-label">AHR Expo · Las Vegas</p>
-      <p class="ahr-headline">Presented CET's product roadmap to 100+ customers and dealers at AHR Expo, one of North America's largest HVAC trade shows</p>
-      <p class="ahr-body">Ran 20+ customer interviews to understand what we should be building and why. For specific features, I went deep with the right customers to nail down requirements. Combined that with sprint planning and engineering estimates to build a roadmap I could actually stand behind, then presented it directly to dealers and decision-makers at one of North America's largest HVAC trade shows.</p>
-    </div>
-  </div>
-</div>
-
-
-<section class="skills" id="skills">
-  <div class="skills-top">
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
     <div>
-      <p class="skills-label">My Skills</p>
-      <h2 class="skills-hed">Building Product</h2>
-      <p class="skills-sub">I work across the full range of product management, from discovery and strategy through delivery and go-to-market. I'm comfortable going deep on any part of the process when the product needs it.</p>
+      <p class="about-label">About</p>
+      <h2 class="about-hed">From the other side of the phone</h2>
     </div>
-    <div><!-- spacer --></div>
-  </div>
-
-  <div class="carousel-wrap">
-    <div class="carousel-track" id="carousel">
-      <!-- Original set -->
-      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Product Strategy</h3><p>Roadmapping, opportunity sizing, prioritization, business case development</p></div>
-      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Product Delivery</h3><p>PRDs, UI design, cross-functional execution, launch readiness, iteration</p></div>
-      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><h3>Cross-Functional Ops</h3><p>Engineering, firmware, operations, sales, and marketing alignment</p></div>
-      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Customer Discovery</h3><p>Customer interviews, field feedback, VOC synthesis, requirements definition</p></div>
-      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Financial Modeling</h3><p>NPV analysis, cost modeling, pricing strategy, budget ownership</p></div>
-      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Technical Execution</h3><p>Python, Lovable, Supabase, ERP integration, hardware validation</p></div>
-      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><h3>Go-to-Market</h3><p>Market segmentation, positioning, pricing, sales enablement, launch</p></div>
-      <!-- Duplicate set for seamless loop -->
-      <div class="skill-card" aria-hidden="true"><div class="skill-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Product Strategy</h3><p>Roadmapping, opportunity sizing, prioritization, business case development</p></div>
-      <div class="skill-card" aria-hidden="true"><div class="skill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Product Delivery</h3><p>PRDs, UI design, cross-functional execution, launch readiness, iteration</p></div>
-      <div class="skill-card" aria-hidden="true"><div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><h3>Cross-Functional Ops</h3><p>Engineering, firmware, operations, sales, and marketing alignment</p></div>
-      <div class="skill-card" aria-hidden="true"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Customer Discovery</h3><p>Customer interviews, field feedback, VOC synthesis, requirements definition</p></div>
-      <div class="skill-card" aria-hidden="true"><div class="skill-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Financial Modeling</h3><p>NPV analysis, cost modeling, pricing strategy, budget ownership</p></div>
-      <div class="skill-card" aria-hidden="true"><div class="skill-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Technical Execution</h3><p>Python, Lovable, Supabase, ERP integration, hardware validation</p></div>
-      <div class="skill-card" aria-hidden="true"><div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><h3>Go-to-Market</h3><p>Market segmentation, positioning, pricing, sales enablement, launch</p></div>
+    <div class="about-body">
+      <p>I graduated from UBC in mechanical engineering in 2024 and joined Critical Environment Technologies as an application engineer. For a year I was the person customers called: 1,700+ system quotations, 200+ technical calls, 100+ system layouts. I learned exactly where the products hurt, because I was the one apologizing for it.</p>
+      <p>Eleven months in, I moved into product. Today I own product across five product lines. I built the company's first intake and prioritization system, introduced its first sprint cadence, led a zero-to-one hardware program from discovery through certification, and shipped the software that replaced the tools I used to complain about.</p>
+      <p>The through line is that I do not hand off. I run the discovery, build the business case, write the spec, sit in the sprint, and then check the result against the thing a technician actually installs. <strong>I am looking for a product role where the problems are harder and the loop is faster.</strong></p>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="projects" id="projects">
+<section class="projects" id="work">
   <div class="projects-inner">
     <div class="projects-header">
       <h2 class="projects-hed">Selected Projects</h2>
       <a href="mailto:ainesh8@gmail.com" class="projects-contact">Get in touch →</a>
     </div>
-    <p class="projects-sub">Every project here is one I owned end to end — problem definition, strategy, execution, and launch. No hand-offs. No summaries of other people's work.</p>
+    <p class="projects-sub">Every project here is one I owned end to end: problem definition, strategy, execution, and launch. No hand-offs. No summaries of other people's work.</p>
 
     <div class="proj-list">
       <a href="work/cis.html" class="proj-row">
         <span class="proj-num">01</span>
         <div class="proj-body">
           <div class="proj-tags"><span class="proj-tag">Agile · Sprint Management</span><span class="proj-tag">Zero-to-One</span><span class="proj-tag">Cross-Functional</span></div>
-          <div class="proj-body-thumb proj-thumb--cis"><img src="assets/cis-workflow.png" alt="CIS Workflow" loading="lazy"/></div>
+          <div class="proj-body-thumb proj-thumb--cis"><img src="assets/cis-workflow.png" alt="CIS workflow diagram" loading="lazy"/></div>
           <h3 class="proj-title">Product Innovation &amp; Delivery System</h3>
-          <p class="proj-hook">Built the company's first product operating system from scratch — cutting idea triage time from up to 3 months to ~1 week and improving engineering throughput ~19% over 17 consecutive sprints.</p>
-          <div class="proj-metrics"><span><strong>3mo → 1wk</strong> triage time</span><span><strong>~19%</strong> throughput gain</span><span><strong>130+</strong> ideas managed</span></div>
+          <p class="proj-hook">Built the company's first product operating system from scratch, cutting idea triage time from up to 3 months to about one week and improving engineering throughput 19% over 17 consecutive sprints.</p>
+          <div class="proj-metrics"><span><strong>3 mo → 1 wk</strong> triage time</span><span><strong>19%</strong> throughput gain</span><span><strong>130+</strong> ideas managed</span></div>
         </div>
         <div class="proj-thumb proj-thumb--cis">
-          <img src="assets/cis-workflow.png" alt="CIS Workflow" loading="lazy"/>
+          <img src="assets/cis-workflow.png" alt="CIS workflow diagram" loading="lazy"/>
         </div>
         <span class="proj-arrow">→</span>
       </a>
@@ -131,13 +138,13 @@
         <span class="proj-num">02</span>
         <div class="proj-body">
           <div class="proj-tags"><span class="proj-tag">Hardware · Zero-to-One</span><span class="proj-tag">Go-to-Market</span><span class="proj-tag">Financial Modeling</span></div>
-          <div class="proj-body-thumb proj-thumb--cgas"><img src="assets/cgas-xp-render.jpg" alt="CGAS-XP" loading="lazy"/></div>
-          <h3 class="proj-title">CGAS-XP — Explosion-Proof Gas Detector</h3>
-          <p class="proj-hook">Led a zero-to-one hardware program to replace a white-label gas detector with our own in-house design, cutting unit cost ~71% and customer price ~40%, allowing us to compete aggressively in the industrial hazardous location market for the first time.</p>
-          <div class="proj-metrics"><span><strong>~71%</strong> cost reduction</span><span><strong>~40%</strong> price reduction</span><span><strong>Pre-launch</strong> orders matched prior year</span></div>
+          <div class="proj-body-thumb proj-thumb--cgas"><img src="assets/cgas-xp-render.jpg" alt="CGAS-XP explosion-proof gas detector" loading="lazy"/></div>
+          <h3 class="proj-title">CGAS-XP: Explosion-Proof Gas Detector</h3>
+          <p class="proj-hook">Led a zero-to-one hardware program to replace a white-label gas detector with our own in-house design, cutting unit cost 71% and customer price 40%, allowing us to compete aggressively in the industrial hazardous location market for the first time.</p>
+          <div class="proj-metrics"><span><strong>71%</strong> cost reduction</span><span><strong>40%</strong> price reduction</span><span><strong>Pre-launch</strong> orders matched prior year</span></div>
         </div>
         <div class="proj-thumb proj-thumb--cgas">
-          <img src="assets/cgas-xp-render.jpg" alt="CGAS-XP" loading="lazy"/>
+          <img src="assets/cgas-xp-render.jpg" alt="CGAS-XP explosion-proof gas detector" loading="lazy"/>
         </div>
         <span class="proj-arrow">→</span>
       </a>
@@ -146,13 +153,13 @@
         <span class="proj-num">03</span>
         <div class="proj-body">
           <div class="proj-tags"><span class="proj-tag">Software · ERP Integration</span><span class="proj-tag">PM + Dev + QA</span></div>
-          <div class="proj-body-thumb proj-thumb--fcs"><img src="assets/fcs-dashboard.png" alt="FCS Configurator" loading="lazy"/></div>
+          <div class="proj-body-thumb proj-thumb--fcs"><img src="assets/fcs-configurator.png" alt="Gas detection system configurator" loading="lazy"/></div>
           <h3 class="proj-title">Gas Detection System Configurator</h3>
-          <p class="proj-hook">Scoped and launched a web configurator and production database that replaced an Excel configurator and a legacy system, cutting configuration time 75% and unit build time ~10%. Supported the development, testing, and validation throughout.</p>
-          <div class="proj-metrics"><span><strong>75%</strong> config time reduction</span><span><strong>~10%</strong> build time reduction</span><span><strong>3</strong> personas, 2 tools, 1 platform</span></div>
+          <p class="proj-hook">Scoped and launched a web configurator and production database that replaced an Excel configurator and a legacy system, cutting configuration time 75% and unit build time 10%. Then took over the codebase, the QA, and the release validation.</p>
+          <div class="proj-metrics"><span><strong>75%</strong> config time reduction</span><span><strong>10%</strong> build time reduction</span><span><strong>2</strong> teams, one platform</span></div>
         </div>
         <div class="proj-thumb proj-thumb--fcs">
-          <img src="assets/fcs-dashboard.png" alt="FCS Configurator dashboard" loading="lazy"/>
+          <img src="assets/fcs-configurator.png" alt="Gas detection system configurator" loading="lazy"/>
         </div>
         <span class="proj-arrow">→</span>
       </a>
@@ -161,16 +168,52 @@
         <span class="proj-num">04</span>
         <div class="proj-body">
           <div class="proj-tags"><span class="proj-tag">Consumer · Applied AI</span><span class="proj-tag">Solo Full-Stack</span></div>
-          <div class="proj-body-thumb proj-thumb--shop"><img src="assets/shopsmart-screenshot.png" alt="ShopSmart" loading="lazy"/></div>
-          <h3 class="proj-title">Personal Project — Amazon ShopSmart</h3>
-          <p class="proj-hook">Ran 50+ user surveys, identified a gap in Amazon's comparison UX, and shipped an AI-powered product solo, from Figma to deployed Flask app, through 4 rounds of user testing.</p>
-          <div class="proj-metrics"><span><strong>100+</strong> user surveys</span><span><strong>4</strong> major iterations</span><span><strong>Shipped</strong> & validated with 15+ users</span></div>
+          <div class="proj-body-thumb proj-thumb--shop"><img src="assets/shopsmart-screenshot.png" alt="ShopSmart product comparison tool" loading="lazy"/></div>
+          <h3 class="proj-title">Personal Project: ShopSmart</h3>
+          <p class="proj-hook">Ran 50+ user surveys, found a gap in how online marketplaces handle product comparison, and shipped an AI-powered tool solo, from Figma to deployed Flask app, through 3 rounds of user testing.</p>
+          <div class="proj-metrics"><span><strong>50+</strong> user surveys</span><span><strong>3</strong> major iterations</span><span><strong>Shipped</strong> &amp; validated with 15+ users</span></div>
         </div>
         <div class="proj-thumb proj-thumb--shop">
-          <img src="assets/shopsmart-screenshot.png" alt="ShopSmart app" loading="lazy"/>
+          <img src="assets/shopsmart-screenshot.png" alt="ShopSmart product comparison tool" loading="lazy"/>
         </div>
         <span class="proj-arrow">→</span>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- AHR VEGAS STRIP -->
+<div class="ahr-strip">
+  <div class="ahr-inner">
+    <div class="ahr-photo">
+      <img src="assets/ahr-vegas.jpg" alt="Ainesh presenting the product roadmap at AHR Expo in Las Vegas" loading="lazy"/>
+    </div>
+    <div class="ahr-text">
+      <p class="ahr-label">AHR Expo · Las Vegas</p>
+      <p class="ahr-headline">Presented the product roadmap to 100+ customers and dealers at one of North America's largest HVAC trade shows</p>
+      <p class="ahr-body">I built the roadmap from 20+ customer interviews, sprint capacity, and engineering estimates, then took it to the people who would have to live with it. Three days of sessions, one product line at a time.</p>
+      <p class="ahr-body">The useful part was what happened in the room. Key accounts flagged one feature as a blocker for deals they were already working, so I moved it up and re-sequenced the quarter around it. <strong>A roadmap you present and never change is a roadmap nobody told you the truth about.</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <div class="skills-inner">
+    <div class="skills-top">
+      <p class="skills-label">My Skills</p>
+      <h2 class="skills-hed">Building Product</h2>
+      <p class="skills-sub">I work across the full range of product management, from discovery and strategy through delivery and go-to-market. I am comfortable going deep on any part of the process when the product needs it.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Product Strategy</h3><p>Roadmapping, opportunity sizing, prioritization, business case development</p></div>
+      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Product Delivery</h3><p>PRDs, UI design, cross-functional execution, launch readiness, iteration</p></div>
+      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><h3>Cross-Functional Ops</h3><p>Engineering, firmware, operations, sales, and marketing alignment</p></div>
+      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Customer Discovery</h3><p>Customer interviews, field feedback, VOC synthesis, requirements definition</p></div>
+      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Financial Modeling</h3><p>NPV analysis, cost modeling, pricing strategy, budget ownership</p></div>
+      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Technical Execution</h3><p>Python, Lovable, Supabase, ERP integration, AI eval design, hardware validation</p></div>
+      <div class="skill-card"><div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><h3>Go-to-Market</h3><p>Market segmentation, positioning, pricing, sales enablement, launch</p></div>
     </div>
   </div>
 </section>
@@ -179,32 +222,28 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="assets/avatar.png" alt="Ainesh" class="footer-avatar"/>
+      <span class="monogram">AL</span>
       <span class="footer-name">Ainesh Lertsachakul</span>
     </div>
-    <a href="mailto:ainesh8@gmail.com" class="footer-cta">Get in touch →</a>
-    <div class="footer-icons">
-      <a href="mailto:ainesh8@gmail.com" class="nav-icon-btn">
-        <img src="https://cdn.prod.website-files.com/696c561ca54b8c3b01a6b89a/697062b238d113175ac10a79_vecteezy_gmail-png-icon_16716465.png" alt="Gmail"/>
-      </a>
-      <a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" class="nav-icon-btn">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      </a>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="assets/Ainesh_Lertsachakul_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <div class="footer-right">
+      <a href="mailto:ainesh8@gmail.com" class="footer-cta">Get in touch →</a>
+      <div class="footer-icons">
+        <a href="mailto:ainesh8@gmail.com" class="nav-icon-btn" aria-label="Email Ainesh">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3d3f52" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aineshlertsachakul/" target="_blank" rel="noopener" class="nav-icon-btn" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
 
-<script>
-// Fade-in on scroll
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; io.unobserve(e.target); }
-  });
-}, { threshold: 0.04 });
-document.querySelectorAll('.proj-row, .stat').forEach((el, i) => {
-  el.style.cssText += `;opacity:0;transform:translateY(12px);transition:opacity .4s ${Math.min(i,5)*.07}s ease,transform .4s ${Math.min(i,5)*.07}s ease`;
-  io.observe(el);
-});
-</script>
+<script src="app.js"></script>
 </body>
 </html>
